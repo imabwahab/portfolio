@@ -1,8 +1,10 @@
+import Navbar from "./components/Navbar/Navbar"
+import "./style.css"
 
 function App() {
   return (
     <>
-      my portfolio app.
+      <Navbar />
     </>
   )
 }
