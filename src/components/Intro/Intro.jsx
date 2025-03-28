@@ -1,7 +1,7 @@
 import React from 'react'
 import './Intro.css'
 import bg from '../../assets/image.png'
-import profile from '../../../public/profile.png'
+import profile from '../../assets/profile.png'
 import btnImg from '../../assets/hireme.png'
 import { Link } from 'react-scroll'
 
