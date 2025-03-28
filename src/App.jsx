@@ -1,3 +1,5 @@
+import Contact from "./components/Contact/contact.jsx"
+import Footer from "./components/Footer/Footer.jsx"
 import Intro from "./components/Intro/Intro.jsx"
 import Navbar from "./components/Navbar/Navbar"
 import Project from "./components/Projects/Project.jsx"
@@ -11,6 +13,8 @@ function App() {
       <Intro />
       <Skills />
       <Project />
+      <Contact />
+      <Footer />
     </div>
   )
 }
