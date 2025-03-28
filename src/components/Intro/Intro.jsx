@@ -1,6 +1,7 @@
 import React from 'react'
 import './Intro.css'
 import bg from '../../assets/image.png'
+import profile from '../../../public/profile.png'
 import btnImg from '../../assets/hireme.png'
 import { Link } from 'react-scroll'
 
@@ -15,13 +16,15 @@ function Intro() {
           <br />
           Website Developer.
         </span>
-        <p className="introPara">I'm a skilled web designer with experience in creating <br /> the visually appealing , user friendly websites, designs and their solutions.</p>
+        <p className="introPara">I'm a skilled front-end web developer with experience in building visually appealing,<br /> user-friendly websites. I specialize in designing and developing responsive web solutions <br />using HTML, CSS, JavaScript, React, and Bootstrap, ensuring seamless user experiences.
 
-        <Link><button className="btn"><img src={btnImg} alt="" className='btnImg'/>Hire me</button></Link>
+        </p>
+
+        <Link><button className="btn"><img src={btnImg} alt="" className='btnImg' />Hire me</button></Link>
 
       </div>
 
-      <img src={bg} alt="" className="bg" />
+      <img src={profile} alt="" className="bg" />
     </section>
   )
 }
