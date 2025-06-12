@@ -1,4 +1,4 @@
-#Intro{
+#Intro {
   height: calc(100vh-4rem);
   width: 100vw;
   max-width: 75rem;
@@ -12,85 +12,115 @@
   top: 100px;
   right: 100px;
   z-index: -1;
-  object-fit: cover;
-  height: 90vh;
+  object-fit: contain;
+ 
+  background-color: rgb(164, 162, 162);
+  border-radius: 39px;
+  width: 88%  ;
+  height: 100vh;
+  opacity: 0.5;
 }
 
-.introContent{
+
+.introContent {
   height: 100vh;
   width: 100vw;
-  padding: 2rem 4rem;
-  font-size:3rem ;
+  padding: 0rem 4rem 2rem 10rem;
+
+  font-size: 3rem;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.hello{
+.hello {
   font-size: 1.75rem;
   font-weight: 100;
 }
 
-.IntroName{
+.IntroName {
   color: yellow;
 }
 
-.introPara{
+.introPara {
   font-size: medium;
   font-weight: 300;
 }
 
-.btn{
+.btn {
   background-color: white;
-  margin: 1rem 0 ;
+  margin: 1rem 0;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 2rem;
 }
 
-.btnImg{
+.btnImg {
   object-fit: cover;
   margin: 0 0.25rem;
   height: 1rem;
 }
 
 
-@media screen and (max-width:840px) {
+@media screen and (max-width:1080px) {
   .bg {
-      right: 0vh;
-      height: 85vh;
-      width: auto;
-      opacity: 0.7;
-  }
-  .introContent {
-      font-size: 8vw;
-      padding: 3rem;
-  }
-  .hello {
-      font-size: 4.5vw;
-  }
-  
-}
-
-@media screen and (max-width:600px){
-  .bg {
-    right: 0vh;
-    height: 70vh;
+    right: 10vh;
+    height: 85vh;
     width: auto;
     opacity: 0.5;
-}
+    width: 90%;
+  }
+
   .introContent {
-    font-size: 10vw;
-    padding: 2rem;
+    font-size: 5vw;
+    padding: 3rem;
+    padding-left: 8rem;
+  }
+
+  .hello {
+    font-size: 3.5vw;
+  }
+
 }
+
+@media screen and (max-width:720px) {
+  .bg {
+    right: 10vh;
+    height: 70vh;
+    width:85% ;
+    opacity: 0.5;
+  }
+
+
+
+  .introContent {
+    font-size: 5vw;
+    padding: 3rem;
+    padding-left: 4.5rem;
+  }
+
+  .hello {
+    font-size: 3.5vw;
+  }
 }
 
 @media screen and (max-width:480px) {
   .bg {
-      right: 0vw;
-      height: 60vh;
-      width: 40vh;
-      object-fit: contain;
+    right: 3vh;
+    opacity: 0.3;
+    object-fit: contain;
+    width: 92%;
   }
+
+  .introContent {
+    font-size: 5vw;
+    padding: 3rem;
+  }
+
+  .hello {
+    font-size: 3.5vw;
+  }
+
+
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import './Intro.css'
 import bg from '../../assets/image.png'
 import profile from '../../assets/profile.png'
+import profil from '../../assets/profil.png'
 import btnImg from '../../assets/hireme.png'
 import { Link } from 'react-scroll'
 
@@ -20,7 +21,9 @@ function Intro() {
 
         </p>
 
-        <Link><button className="btn"><img src={btnImg} alt="" className='btnImg' />Hire me</button></Link>
+        <a href="/portfolio/cv.pdf" download="cv.pdf"><button className="btn">CV</button></a>
+
+        <Link></Link>
 
       </div>
 
