@@ -43,10 +43,6 @@
   transition: 0.3s;
 }
 
-.desktopMenuBtn:hover{
-  background-color: rgb(104, 92, 92);
-  color: white;
-}
 
 
 .desktopMenuImg{

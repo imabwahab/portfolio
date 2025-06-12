@@ -7,16 +7,18 @@ import { Link } from 'react-scroll'
 function Navbar() {
   return (
     <nav className="navbar">
-      <img src={logo} alt="Logo" className='logo'/>
+      <img src={logo} alt="Logo" className='logo' />
 
       <div className="desktopMenu">
-        <Link className="desktopMenuItem">Home</Link>
-        <Link className="desktopMenuItem">Clients</Link>
-        <Link className="desktopMenuItem">Portfolio</Link>
-        <Link className="desktopMenuItem">About</Link>
+        <Link className="desktopMenuItem" activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500}>Home</Link>
+        <Link className="desktopMenuItem" activeClass='active' to='skills' spy={true} smooth={true} offset={-40} duration={500}>Skills</Link>
+        <Link className="desktopMenuItem" activeClass='active' to='works' spy={true} smooth={true} offset={-80} duration={500} >Projects</Link>
+        <Link className="desktopMenuItem" activeClass='active' to='skills' spy={true} smooth={true} offset={-40} duration={500} >About</Link>
       </div>
 
-      <button className="desktopMenuBtn">
+      <button className="desktopMenuBtn" onClick={() => {
+        document.getElementById('contactPage').scrollIntoView({behavior:'smooth'});
+      }}>
         <img src={contactImg} alt="" className='desktopMenuImg' />
         Contact Me
       </button>
