@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 80px;
   padding: 3px;
 }
 
@@ -66,7 +67,7 @@
 
 
 .progressBar {
-  width: 100%; /* Makes it fully adapt to its parent */
+  width: 80%; /* Makes it fully adapt to its parent */
   background-color: #e0e0e0;
   border-radius: 5px;
   height: 10px;
