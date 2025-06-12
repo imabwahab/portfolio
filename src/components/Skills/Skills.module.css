@@ -1,12 +1,11 @@
+/* Skills Section */
 #skills {
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   max-width: 65rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   margin: 0 auto;
   padding: 3px;
 }
@@ -16,6 +15,7 @@
   font-weight: 600;
   padding-top: 3rem;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .skillDesc {
@@ -23,62 +23,104 @@
   font-size: 1rem;
   max-width: 51rem;
   padding: 0 2rem;
+  text-align: center;
 }
 
-.skillBars {
-  margin: 1.5rem;
-  width: 100vw;
-  max-width: 80%;
-  text-align: left;
-}
-
-.skillBar {
+/* Skill Grid Container */
+.skillsBar {
   display: flex;
-  margin: 1rem;
-  padding: 1.5rem 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 80%;
+  margin-top: 2rem;
+}
+
+/* Individual Skill Box */
+.skillBox {
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(45% - 1rem); /* two per row */
+  min-width: 260px;
+  max-width: 280px;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   background: rgb(50, 50, 50);
+  box-sizing: border-box;
 }
 
-.skillBarImg {
-  object-fit: cover;
+.icon {
   height: 3rem;
   width: 3rem;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }
 
-.skillBarText>p {
-  font-size: 0.9rem;
-  font-weight: 200;
+.skillBarText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media screen and (max-width:840px) {
-  #skills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.progressBar {
+  width: 100%; /* Makes it fully adapt to its parent */
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 10px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progressFill {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+.percentage {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #ccc;
+}
+
+
+@media screen and (max-width: 600px) {
+  .skillBox {
+    flex: 1 1 100%;
+    padding: 1rem 0.8rem;
+  }
+
+  .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+  }
+
+  .progressBar {
+    width: 100px;
+    height: 8px;
+  }
+
+  .percentage {
+    font-size: 0.75rem;
   }
 }
 
-@media screen and (max-width:720px) {
-  .skillBarText>p {
-      font-size: 2vw;
+/* Media Queries */
+@media screen and (max-width: 920px) {
+  .skillBox {
+    flex: 1 1 100%; /* full width on small screens */
   }
-}
-
-@media screen and (max-width:480px) {
-
-  .skillBar{
-    margin: 1rem 3rem;
+ 
+   .progressBar {
+    width: 100px;
+    height: 8px;
   }
-  .skillBarText>p {
-      font-size: 3vw;
-  }
-  .skillBarImg {
-      height: 2.25rem;
-      width: 2.25rem;
-  }
-  .skillBarText>h2 {
-      font-size: 5vw;
+  .percentage {
+    font-size: 3vw;
   }
 }
