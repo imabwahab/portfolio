@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.bg {
+.bg-img {
   position: absolute;
   top: 100px;
   right: 100px;
@@ -64,7 +64,7 @@
 
 
 @media screen and (max-width:1080px) {
-  .bg {
+  .bg-img {
     right: 10vh;
     height: 85vh;
     width: auto;
@@ -85,7 +85,7 @@
 }
 
 @media screen and (max-width:720px) {
-  .bg {
+  .bg-img {
     right: 10vh;
     height: 70vh;
     width:85% ;
@@ -106,11 +106,12 @@
 }
 
 @media screen and (max-width:480px) {
-  .bg {
+  .bg-img{
     right: 3vh;
     opacity: 0.3;
     object-fit: contain;
     width: 92%;
+    height: 80vh;
   }
 
   .introContent {

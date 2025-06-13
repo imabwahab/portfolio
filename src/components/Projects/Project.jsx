@@ -1,23 +1,40 @@
-import  './Project.css';
+import './Project.css';
 import Portfolio1 from '../../assets/portfolio-1.png';
 import Portfolio2 from '../../assets/portfolio-2.png';
 import Portfolio3 from '../../assets/portfolio-3.png';
 import Portfolio4 from '../../assets/portfolio-4.png';
 import Portfolio5 from '../../assets/portfolio-5.png';
 import Portfolio6 from '../../assets/portfolio-6.png';
+import gemini from '../../assets/gemini.jpg'
+import vmrm from '../../assets/vmrm.png';
+import geminiClone from '../../assets/geminiClone.png';
+
+const projectData = [
+     { img: geminiClone, title: 'Gemini Clone' },
+      { img: vmrm, title: 'VMRM' }
+    // { img: Portfolio1, title: 'Project One' },
+    // { img: Portfolio2, title: 'Project Two' },
+    // { img: Portfolio3, title: 'Project Three' },
+    // { img: Portfolio4, title: 'Project Four' },
+    // { img: Portfolio5, title: 'Project Five' },
+    // { img: Portfolio6, title: 'Project Six' },
+];
+
 
 const Works = () => {
+
     return (
         <section id='works'>
             <h2 className='worksTitle'>Projects</h2>
-            <span className='worksDesc'>I take pride in paying attention to the smallest details and making sure that my work is pixel perfect. I am excited to bring my skills and experience to help businesses achieve their goals and create a strong online presence.</span>
+            <span className='worksDesc'>Here is the list of projects that i have worked on.</span>
             <div className='worksImgs'>
-                <img src={Portfolio1} alt="" className='worksImg' />
-                <img src={Portfolio2} alt="" className='worksImg' />
-                <img src={Portfolio3} alt="" className='worksImg' />
-                <img src={Portfolio4} alt="" className='worksImg' />
-                <img src={Portfolio5} alt="" className='worksImg' />
-                <img src={Portfolio6} alt="" className='worksImg' />
+                {projectData.map((project, index) => (
+                    <div className='projectCard' key={index}>
+                        <img src={project.img} alt={project.title} className='worksImg' />
+                        <p className='projectTitle'>{project.title}</p>
+                    
+                    </div>
+                ))}
             </div>
             <button className='workBtn'>See More</button>
         </section>

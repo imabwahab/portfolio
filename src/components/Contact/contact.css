@@ -13,6 +13,7 @@
 .contactPageTitle {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: yellow;
 }
 
 .clientDesc {
@@ -89,4 +90,30 @@
     margin: 0 0.75rem;
     background-color: rgb(30, 30, bl30ue);
     color: rgb(250, 250, 232);
+}
+
+.twitter{
+    padding: 4px;
+    border-radius: 10px;
+}
+.in-icon {
+    color: #ffffff;
+    background-color: #0077B5;
+    border-radius: 10px;
+   
+
+}
+
+.facebook{
+     background-color: #1877F2;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
 }

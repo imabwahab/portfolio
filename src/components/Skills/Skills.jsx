@@ -1,13 +1,21 @@
-import  './Skills.css'
-import { FaHtml5 } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa6";
+import './Skills.css';
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaBootstrap } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa6";
 import { BsFiletypeSql } from "react-icons/bs";
 import { BiLogoMongodb } from "react-icons/bi";
 
 function Skills() {
+  
+  const skillsInfo = [
+    { icon: FaHtml5, skillTitle: 'HTML', skillPercentage: '70%' },
+    { icon: FaCss3Alt, skillTitle: 'CSS', skillPercentage: '70%' },
+    { icon: IoLogoJavascript, skillTitle: 'JavaScript', skillPercentage: '70%' },
+    { icon: FaReact, skillTitle: 'React', skillPercentage: '70%' },
+    { icon: FaBootstrap, skillTitle: 'Bootstrap', skillPercentage: '70%' },
+    { icon: BsFiletypeSql, skillTitle: 'MySQL', skillPercentage: '70%' },
+    { icon: BiLogoMongodb, skillTitle: 'MongoDB', skillPercentage: '70%' }
+  ];
+
   return (
     <section id='skills'>
       <span className='skillTitle'>Skills</span>
@@ -15,89 +23,25 @@ function Skills() {
         My expertise spans HTML, CSS, JavaScript, React, Bootstrap, and databases like MySQL and MongoDB. Below, you'll find a visual breakdown of my proficiency in each technology.
       </span>
 
-
       <div className='skillsBar'>
-
-        <div className='skillBox'>
-          <FaHtml5 className='icon' />
-          <div className='skillBarText'>
-            <h2>HTML</h2>
-            <div className='progressBar'>
-              <div className='progressFill' style={{ width: '70%' }}></div>
+        {skillsInfo.map((skill, index) => {
+          const IconComponent = skill.icon;
+          return (
+            <div className='skillBox' key={index}>
+              <IconComponent className='icon' />
+              <div className='skillBarText'>
+                <h2>{skill.skillTitle}</h2>
+                <div className='progressBar'>
+                  <div className='progressFill' style={{ width: skill.skillPercentage }}></div>
+                </div>
+                <span className='percentage'>{skill.skillPercentage}</span>
+              </div>
             </div>
-            <span className='percentage'>70%</span>
-          </div>
-        </div>
-
-        <div className='skillBox'>
-          <FaCss3Alt className='icon' />
-          <div className='skillBarText'>
-            <h2>CSS</h2>
-            <div className='progressBar'>
-              <div className='progressFill'style={{ width: '70%' }}></div>
-            </div>
-            <span className='percentage'>70%</span>
-          </div>
-        </div>
-
-        <div className='skillBox'>
-          <IoLogoJavascript className='icon' />
-          <div className='skillBarText'>
-            <h2>JavaScript</h2>
-            <div className='progressBar'>
-              <div className='progressFill'style={{ width: '70%' }}></div>
-            </div>
-            <span className='percentage'>70%</span>
-          </div>
-        </div>
-
-
-        <div className='skillBox'>
-          <FaBootstrap className='icon' />
-          <div className='skillBarText'>
-            <h2>Bootstrap</h2>
-            <div className='progressBar'>
-              <div className='progressFill'style={{ width: '70%' }}></div>
-            </div>
-            <span className='percentage'>70%</span>
-          </div>
-        </div>
-
-        <div className='skillBox'>
-          <FaReact className='icon' />
-          <div className='skillBarText'>
-            <h2>REACT</h2>
-            <div className='progressBar'>
-              <div className='progressFill'style={{ width: '70%' }}></div>
-            </div>
-            <span className='percentage'>70%</span>
-          </div>
-        </div>
-
-        <div className='skillBox'>
-          <BsFiletypeSql className='icon' />
-          <div className='skillBarText'>
-            <h2>MySQL</h2>
-            <div className='progressBar'>
-              <div className='progressFill'style={{ width: '70%' }}></div>
-            </div>
-            <span className='percentage'>70%</span>
-          </div>
-        </div>
-
-        <div className='skillBox'>
-          <BiLogoMongodb className='icon' />
-          <div className='skillBarText'>
-            <h2>MongoDB</h2>
-            <div className='progressBar'>
-              <div className='progressFill'style={{ width: '70%' }}></div>
-            </div>
-            <span className='percentage'>70%</span>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;
