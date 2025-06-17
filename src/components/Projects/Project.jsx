@@ -1,42 +1,44 @@
 import './Project.css';
-import Portfolio1 from '../../assets/portfolio-1.png';
 import Portfolio2 from '../../assets/portfolio-2.png';
-import Portfolio3 from '../../assets/portfolio-3.png';
-import Portfolio4 from '../../assets/portfolio-4.png';
-import Portfolio5 from '../../assets/portfolio-5.png';
-import Portfolio6 from '../../assets/portfolio-6.png';
-import gemini from '../../assets/gemini.jpg'
 import vmrm from '../../assets/vmrm.png';
 import geminiClone from '../../assets/geminiClone.png';
-
-const projectData = [
-     { img: geminiClone, title: 'Gemini Clone' },
-      { img: vmrm, title: 'VMRM' }
-    // { img: Portfolio1, title: 'Project One' },
-    // { img: Portfolio2, title: 'Project Two' },
-    // { img: Portfolio3, title: 'Project Three' },
-    // { img: Portfolio4, title: 'Project Four' },
-    // { img: Portfolio5, title: 'Project Five' },
-    // { img: Portfolio6, title: 'Project Six' },
-];
+import UGH from '../../assets/ugh.png';
+import { useState } from 'react';
 
 
 const Works = () => {
+    const [showList, setShowList] = useState(false);
 
     return (
         <section id='works'>
             <h2 className='worksTitle'>Projects</h2>
             <span className='worksDesc'>Here is the list of projects that i have worked on.</span>
             <div className='worksImgs'>
-                {projectData.map((project, index) => (
-                    <div className='projectCard' key={index}>
-                        <img src={project.img} alt={project.title} className='worksImg' />
-                        <p className='projectTitle'>{project.title}</p>
-                    
-                    </div>
-                ))}
+
+                <div className='projectCard' >
+                    <a href='https://drive.google.com/file/d/1qDgzBzD3WNFkeIWaePoW9qmYez7RJ53R/view?usp=drive_link' target='_blank' rel='noopener noreferrer'>
+                        <img src={vmrm} alt='VMRM' className='worksImg' />
+                    </a>
+                    <p className='projectTitle'>VMRM</p>
+                </div>
+
+                <div className='projectCard'>
+                    <a href="https://imabwahab.github.io/Gemini-Clone/" target='_blank'>
+                        <img src={geminiClone} alt='Gemini-Clone' className='worksImg' />
+                    </a>
+                    <p className='projectTitle'>Gemini-Clone</p>
+                </div>
+
+
+                {showList ? <div className='projectCard' >
+                    <a href=" https://imabwahab.github.io/Gaming-Hub/" target='_blank'>
+                        <img src={UGH} alt='Ultimate Gaming Hub' className='worksImg' />
+                    </a>
+                    <p className='projectTitle'>Gaming Hub</p>
+                </div> : null}
+
             </div>
-            <button className='workBtn'>See More</button>
+            {showList ? <button className='workBtn' onClick={() => setShowList(!showList)}>Reduce</button> : <button className='workBtn' onClick={() => setShowList(!showList)}>See More</button>}
         </section>
     );
 }
