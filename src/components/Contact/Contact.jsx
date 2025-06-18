@@ -1,7 +1,7 @@
 import './contact.css';
 
 import { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
@@ -14,7 +14,7 @@ const Contact = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs.sendForm('service_6phm4ar', 'template_zcxds5a', form.current, 'blaHt_5KIJ711DfGH')
+		emailjs.sendForm('service_se4w84f', 'template_r4elsgp', form.current, 'sFmurYra7IrSz6epr')
 			.then((result) => {
 				console.log(result.text);
 				e.target.reset();
@@ -30,11 +30,15 @@ const Contact = () => {
 			<div id="contact">
 				<h1 className="contactPageTitle">Contact Me</h1>
 				<span className="contactDesc">Please fill out the form below to discuss any work opportunities.</span>
+
+
 				<form className="contactForm" ref={form} onSubmit={sendEmail}>
-					<input type="text" className="name" placeholder='Your name' name='from_name' />
-					<input type="text" className="email" placeholder='Your Email' name='from_email' />
+					<input type="text" className="name" placeholder='Your name' name='name' />
+					<input type="text" className="email" placeholder='Your Email' name='eemail' />
 					<textarea name="message" placeholder='Your Message' rows={5} className='msg' ></textarea>
 					<button type="submit" value="Send" className='submitBtn'>Submit</button>
+
+
 					<div className="links">
 						<a href="https://x.com/imab_wahab" target='_blank'><FaXTwitter className='link twitter' /></a>
 
