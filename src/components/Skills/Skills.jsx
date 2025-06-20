@@ -9,11 +9,11 @@ function Skills() {
   const skillsInfo = [
     { icon: FaHtml5, skillTitle: 'HTML', skillPercentage: '70%' },
     { icon: FaCss3Alt, skillTitle: 'CSS', skillPercentage: '70%' },
-    { icon: IoLogoJavascript, skillTitle: 'JavaScript', skillPercentage: '70%' },
+    { icon: IoLogoJavascript, skillTitle: 'JavaScript', skillPercentage: '60%' },
     { icon: FaReact, skillTitle: 'React', skillPercentage: '70%' },
-    { icon: FaBootstrap, skillTitle: 'Bootstrap', skillPercentage: '70%' },
+    { icon: FaBootstrap, skillTitle: 'Bootstrap', skillPercentage: '60%' },
     { icon: BsFiletypeSql, skillTitle: 'MySQL', skillPercentage: '70%' },
-    { icon: BiLogoMongodb, skillTitle: 'MongoDB', skillPercentage: '70%' }
+    { icon: BiLogoMongodb, skillTitle: 'MongoDB', skillPercentage: '60%' }
   ];
 
   return (

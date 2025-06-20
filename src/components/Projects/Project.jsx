@@ -16,7 +16,7 @@ const Works = () => {
             <div className='worksImgs'>
 
                 <div className='projectCard' >
-                    <a href='https://drive.google.com/file/d/1qDgzBzD3WNFkeIWaePoW9qmYez7RJ53R/view?usp=drive_link' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://vehicle-maintenance-repairing-manag.vercel.app/' target='_blank' rel='noopener noreferrer'>
                         <img src={vmrm} alt='VMRM' className='worksImg' />
                     </a>
                     <p className='projectTitle'>VMRM</p>
@@ -44,3 +44,6 @@ const Works = () => {
 }
 
 export default Works;
+
+
+// https://drive.google.com/file/d/1qDgzBzD3WNFkeIWaePoW9qmYez7RJ53R/view?usp=drive_link
