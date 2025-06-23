@@ -8,14 +8,17 @@ import "./style.css"
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Intro />
-      <Skills />
-      <Project />
-      <Contact />
-      <Footer />
-    </div>
+      <div className="App">
+        <Intro />
+        <Skills />
+        <Project />
+        <Contact />
+        <Footer />
+      </div>
+    </>
+
   )
 }
 

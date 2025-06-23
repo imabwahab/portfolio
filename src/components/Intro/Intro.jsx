@@ -7,6 +7,10 @@ import { Link } from 'react-scroll'
 function Intro() {
   return (
     <section id='intro'>
+      <div className='background'>
+        <img src={profile} alt="" className="bg-img" />
+      </div>
+
       <div className="introContent">
         <span className="hello">Hello,</span>
 
@@ -19,13 +23,13 @@ function Intro() {
 
         </p>
 
-        <a href="/portfolio/cv.pdf" download="cv.pdf"><button className="btn"><HiOutlineDocumentText /> CV</button></a>
+        <a className='download-link ' href="/portfolio/cv.pdf" download="cv.pdf">
+          <button className="btn"><HiOutlineDocumentText /> CV</button>
+        </a>
 
         <Link></Link>
 
       </div>
-
-      <img src={profile} alt="" className="bg-img" />
     </section>
   )
 }

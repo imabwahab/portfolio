@@ -1,7 +1,7 @@
 .footer {
-    width: 100vw;
     height: 4rem;
-    background: rgb(40, 40, 40);
+    background-color: rgb(30, 30, 30);
+    border-top: 1px solid yellow;
     display: flex;
     align-items: center;
     justify-content: center;

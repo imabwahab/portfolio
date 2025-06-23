@@ -16,3 +16,8 @@ body{
   overflow: hidden;
   overflow-y: scroll;
 }
+
+.App{
+  margin: auto;
+  width: 80%;
+}

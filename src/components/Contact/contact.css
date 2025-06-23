@@ -1,6 +1,5 @@
 #contactPage {
     min-height: calc(100vh - 4rem);
-    width: 100vw;
     max-width: 60rem;
     margin: 0 auto;
     text-align: center;
@@ -16,33 +15,11 @@
     color: yellow;
 }
 
-.clientDesc {
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.clientImgs {
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.clientImg {
-    object-fit: cover;
-    width: 23%;
-    min-width: 9rem;
-    margin: auto;
-    padding: 0.25rem;
-}
-
-#clients {
-    padding: 2rem;
-}
-
 .contactDesc {
-    padding: 1rem;
+    padding: 2rem;
     font-size: medium;
     font-weight: 300;
+    max-width: 300px;
 }
 
 .contactForm {
@@ -112,7 +89,7 @@
 }
 
 .instagram {
-    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    background: linear-gradient(45deg, #f5b129, #DD2A7B, #8134AF, #515BD4);
     color: white;
     padding: 4px;
     border-radius: 10px;
