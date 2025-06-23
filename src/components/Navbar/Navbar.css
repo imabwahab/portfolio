@@ -12,17 +12,15 @@
   right: 0;
   z-index: 3;
 
-  background: linear-gradient(
-    to right,
-    rgba(15, 32, 39, 0.8),
-    rgba(30, 60, 100, 0.8),
-    rgba(44, 83, 100, 0.8)
-  );
+  background: linear-gradient(to right,
+      rgba(15, 32, 39, 0.8),
+      rgba(30, 60, 100, 0.8),
+      rgba(44, 83, 100, 0.8));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: #f0f0f0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -45,14 +43,16 @@
 }
 
 .desktopMenuBtn {
-  background-color: white;
-  color: black;
+  background: #00e0ff;
+  color: #0f2027;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
   border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -89,7 +89,11 @@
   padding: 0.5rem;
   height: fit-content;
   min-width: 15rem;
-  background: rgb(40, 40, 40);
+  background: linear-gradient(to right,
+      rgba(15, 32, 39, 1),
+      rgba(30, 60, 100, 1),
+      rgba(44, 83, 100, 1));
+  color: #f0f0f0;
   border-radius: 1rem;
 }
 
@@ -97,7 +101,8 @@
   color: white;
   padding: 0.5rem 3rem;
   margin: 0.25rem;
-  background: rgb(30, 30, 30);
+  background-color: #2c5364;
+  border-radius: 3px;
 }
 
 @media screen and (max-width:720px) {

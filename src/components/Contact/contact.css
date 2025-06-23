@@ -66,9 +66,7 @@
 
 .submitBtn {
     background: #00e0ff;
-    /* primary accent */
     color: #0f2027;
-    /* dark blue for contrast text */
     border: none;
     border-radius: 0.5rem;
     margin: 2rem;

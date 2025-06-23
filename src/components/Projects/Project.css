@@ -36,22 +36,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 26rem;
+  width: 100%;
+  max-width: 27rem;
   margin: 0.5rem;
+   background: linear-gradient(135deg,
+      rgba(15, 32, 39, 1),
+      rgba(30, 60, 100, 0.95),
+      rgba(44, 83, 100, 0.9));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  height: auto;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
 .worksImg {
   width: 100%;
-  height: 16rem;
+  height: 18rem;
   object-fit: cover;
-  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
+.projectCard:hover .worksImg {
+  transform: scale(1.03);
+}
+
+
 .projectTitle {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #debebe;
+  margin-top:  0;
+  padding: 0.8rem 0 1.2rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #e0faff;
+  letter-spacing: 0.5px;
 }
 
 .workBtn {
@@ -59,7 +84,8 @@
   padding: 0.5rem 2.5rem;
   border: none;
   border-radius: 2rem;
-  background: white;
+  background: #00e0ff;
+  color: #0f2027;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
@@ -79,6 +105,7 @@
   }
 
   .projectTitle {
+    margin: 0.5rem 0;
     font-size: 0.9rem;
   }
 }
