@@ -17,7 +17,7 @@
   padding-top: 3rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  color: yellow;
+  color: #e0faff;
 }
 
 .skillDesc {
@@ -44,12 +44,21 @@
 .skillBox {
   display: flex;
   align-items: center;
-  flex: 1 1 calc(45% - 1rem); /* two per row */
+  flex: 1 1 calc(45% - 1rem);
+  /* two per row */
   min-width: 260px;
   max-width: 280px;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background: rgb(50, 50, 50);
+  background: linear-gradient(to right,
+      rgba(15, 32, 39, 0.75),
+      rgba(32, 58, 67, 0.75),
+      rgba(44, 83, 100, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* for Safari support */
+  color: #f0f0f0;
+
   box-sizing: border-box;
 }
 
@@ -67,13 +76,14 @@
   justify-content: center;
 }
 
-.skillBarText h2{
+.skillBarText h2 {
   color: #ffffff;
 }
 
 
 .progressBar {
-  width: 80%; /* Makes it fully adapt to its parent */
+  width: 80%;
+  /* Makes it fully adapt to its parent */
   background-color: #e0e0e0;
   border-radius: 5px;
   height: 10px;
@@ -120,13 +130,15 @@
 /* Media Queries */
 @media screen and (max-width: 920px) {
   .skillBox {
-    flex: 1 1 100%; /* full width on small screens */
+    flex: 1 1 100%;
+    /* full width on small screens */
   }
- 
-   .progressBar {
+
+  .progressBar {
     width: 100px;
     height: 8px;
   }
+
   .percentage {
     font-size: 3vw;
   }

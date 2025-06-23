@@ -12,7 +12,7 @@
 .contactPageTitle {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: yellow;
+    color: #e0faff;
 }
 
 .contactDesc {
@@ -40,19 +40,58 @@
     max-width: 40rem;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
-    color: white;
-    border: none;
     border-radius: 0.5rem;
-    background: rgb(40, 40, 40);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 224, 255, 0.4);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.name::placeholder,
+.email::placeholder,
+.msg::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.name:focus,
+.email:focus,
+.msg:focus {
+    outline: none;
+    border-color: #00e0ff;
+    /* vibrant accent when focused */
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .submitBtn {
-    background: white;
+    background: #00e0ff;
+    /* primary accent */
+    color: #0f2027;
+    /* dark blue for contrast text */
     border: none;
     border-radius: 0.5rem;
     margin: 2rem;
     padding: 0.75rem 3.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 224, 255, 0.3);
 }
+
+.submitBtn:hover {
+    background: #00c3e3;
+    /* slightly deeper shade for hover */
+    box-shadow: 0 6px 20px rgba(0, 224, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.submitBtn:active {
+    background: #00a7cc;
+    transform: scale(0.98);
+}
+
 
 .links {
     display: flex;
@@ -69,23 +108,24 @@
     color: rgb(250, 250, 232);
 }
 
-.twitter{
+.twitter {
     padding: 4px;
     border-radius: 10px;
 }
+
 .in-icon {
     color: #ffffff;
     background-color: #0077B5;
     border-radius: 10px;
-   
+
 
 }
 
-.facebook{
-     background-color: #1877F2;
-  color: white;
-  padding: 8px;
-  border-radius: 10px;
+.facebook {
+    background-color: #1877F2;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
 }
 
 .instagram {

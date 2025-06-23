@@ -19,7 +19,7 @@ function Intro() {
           <br />
           Website Developer.
         </span>
-        <p className="introPara">I'm a skilled front-end web developer with experience in building visually appealing,<br /> user-friendly websites. I specialize in designing and developing responsive web solutions <br />using HTML, CSS, JavaScript, React, and Bootstrap, ensuring seamless user experiences.<br />Also have the knowledge of databases like MongoDB and MySQL.
+        <p className="introPara">I'm a skilled front-end web developer with experience in building visually appealing, user-friendly websites. I specialize in designing and developing responsive web solutions using HTML, CSS, JavaScript, React, and Bootstrap, ensuring seamless user experiences. Also have the knowledge of databases like MongoDB and MySQL.
 
         </p>
 

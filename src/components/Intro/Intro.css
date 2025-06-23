@@ -7,8 +7,7 @@
   position: relative;
   margin-top: 50px;
   padding: 0 10%;
-  box-sizing: border-box;
-  width: 100%; /* make sure it's 100% */
+  width: 100%;
 }
 
 
@@ -33,6 +32,7 @@
 }
 
 .introContent {
+  background-color: rgba(255, 255, 255, 0);
   max-width: 900px;
   width: 100%;
   padding: 2rem;
@@ -43,6 +43,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: left;
+
 }
 
 .hello {
@@ -52,8 +53,13 @@
 }
 
 .IntroName {
-  color: yellow;
+  background: linear-gradient(90deg,#e0faff, #4167e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* fallback */
   margin-left: 0.5rem;
+  font-weight: 700; /* optional, for emphasis */
 }
 
 .introText {
@@ -99,6 +105,7 @@
   .introContent {
     padding: 1.5rem;
     font-size: 1.5rem;
+    border: none;
   }
 
   .introText {
