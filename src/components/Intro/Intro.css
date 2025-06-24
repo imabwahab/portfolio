@@ -15,7 +15,8 @@
   position: absolute;
   inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
+  border:  1.5px solid  #00e0ff;;
   border-radius: 30px;
   overflow: hidden;
   display: flex;
@@ -126,7 +127,7 @@
     padding: 1rem;
   }
   .background .bg-img{
-    opacity: 0.3;
+    opacity: 0.5;
   }
   .introContent {
     padding: 1rem;
