@@ -13,7 +13,7 @@
 body {
   background: linear-gradient(135deg,
       rgba(15, 32, 39, 1),
-      rgba(30, 60, 100, 0.95),
+      rgba(21, 49, 86, 0.95),
       rgba(44, 83, 100, 0.9));
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
@@ -42,4 +42,15 @@ body {
 .App {
   margin: auto;
   width: 90%;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

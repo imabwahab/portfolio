@@ -75,8 +75,11 @@
 
 .mobMenu {
   display: none;
-  object-fit: cover;
-  height: 1.8rem;
+  object-fit: contain;
+  color: #00e0ff ;
+  height: 2.5rem;
+  width: 3rem;
+  
 }
 
 .navMenu {
@@ -92,7 +95,7 @@
   background: linear-gradient(to right,
       rgba(15, 32, 39, 1),
       rgba(30, 60, 100, 1),
-      rgba(44, 83, 100, 1));
+      rgba(15, 32, 39, 1));
   color: #f0f0f0;
   border-radius: 1rem;
 }

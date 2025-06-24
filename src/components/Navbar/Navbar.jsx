@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
-import logo from '../../assets/logo.png'
+
+import W from '../../assets/W.png'
 import contactImg from '../../assets/contact.png'
+
 import '../Navbar/Navbar.css'
 import { Link } from 'react-scroll'
 import menu from '../../assets/menu.png'
+import coloredmenu from '../../assets/coloredlogo.png';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <nav className="navbar">
-      <img src={logo} alt="Logo" className='logo' />
+      <img src={W} alt="Logo" className='logo' />
 
       <div className="desktopMenu">
         <Link className="desktopMenuItem" activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500}>Home</Link>
@@ -26,7 +29,7 @@ function Navbar() {
       </button>
 
 
-      <img src={menu} alt="Menu" className='mobMenu' onClick={() => setShowMenu(!showMenu)} />
+      <img src={coloredmenu} className='mobMenu' onClick={() => setShowMenu(!showMenu)} />
       <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
         <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Home</Link>
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Skills</Link>
