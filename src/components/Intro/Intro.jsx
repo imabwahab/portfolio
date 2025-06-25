@@ -15,12 +15,12 @@ function Intro() {
         <span className="hello">Hello,</span>
 
         <span className="introText">I'm
-          <span className="IntroName">      Abdul Wahab</span>
+          <span className="IntroName" style={{ marginLeft: '0.5rem' }}> Abdul Wahab</span>
           <br />
-          Website Developer.
+          <span className="skill">Website Developer.</span>
         </span>
-        <p className="introPara">I'm a skilled front-end web developer with experience in building visually appealing, user-friendly websites. I specialize in designing and developing responsive web solutions using HTML, CSS, JavaScript, React, and Bootstrap, ensuring seamless user experiences. Also have the knowledge of databases like MongoDB and MySQL.
-
+        <p className="introPara">
+          I'm a front-end web developer focused on building responsive, accessible, and visually engaging websites. With experience in modern tools like React, JavaScript, and CSS frameworks, I create user-centric solutions that deliver seamless digital experiences.
         </p>
 
         <a className='download-link ' href="/portfolio/cv.pdf" download="cv.pdf">

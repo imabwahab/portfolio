@@ -6,15 +6,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 10px auto;
   margin-bottom: 80px;
-  padding: 3px;
+  padding: 3rem 0;
 }
 
 .skillTitle {
   font-size: 3rem;
   font-weight: 600;
-  padding-top: 3rem;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #e0faff;
@@ -23,7 +22,7 @@
 .skillDesc {
   font-weight: 400;
   font-size: 1rem;
-  max-width: 51rem;
+  max-width: 55rem;
   padding: 0 2rem;
   text-align: center;
 }
@@ -31,115 +30,54 @@
 /* Skill Grid Container */
 .skillsBar {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  max-width: 80%;
-  margin-top: 2rem;
-}
-
-/* Individual Skill Box */
-.skillBox {
-  display: flex;
-  align-items: center;
-  flex: 1 1 calc(45% - 1rem);
-  /* two per row */
-  min-width: 260px;
-  max-width: 280px;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(to right,
-      rgba(15, 32, 39, 0.75),
-      rgba(32, 58, 67, 0.75),
-      rgba(44, 83, 100, 0.75));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  /* for Safari support */
-  color: #f0f0f0;
-
-  box-sizing: border-box;
-}
-
-.icon {
-  height: 3rem;
-  width: 3rem;
-  margin-right: 1.5rem;
-
-}
-
-.skillBarText {
-  flex: 1;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.skillBarText h2 {
-  color: #ffffff;
-}
-
-
-.progressBar {
-  width: 80%;
-  /* Makes it fully adapt to its parent */
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  height: 10px;
-  margin-top: 8px;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 85%;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border:  1.5px solid  #00e0ff;
+  border-radius: 14px;
   overflow: hidden;
 }
 
-.progressFill {
-  background-color: #4caf50;
-  height: 100%;
-  border-radius: 5px;
-  transition: width 0.5s ease-in-out;
+.skillsBarHeader {
+  width: 100%;
+  background-color:  #3B4D61;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+    border-bottom:  1.5px solid  #00e0ff;
+}
+.skillsBarHeader h2{
+  font-size: 32px;
+}
+.skillsBarHeader .skillIcon{
+  height: 3rem;
+  width: 3rem;
+  font-size: larger;
+  padding: 6px;
+  border-radius: 4px;
+  background: linear-gradient(90deg,#79e1f5, #4167e2);
 }
 
-.percentage {
-  font-size: 12px;
-  margin-top: 4px;
-  color: #ccc;
-}
 
+.skillCards {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding:0rem 2rem 20px;
+  gap: 1rem;
+}
 
 @media screen and (max-width: 600px) {
-  .skillBox {
-    flex: 1 1 100%;
-    padding: 1rem 0.8rem;
-  }
-
-  .icon {
-    height: 2.5rem;
-    width: 2.5rem;
-    margin-right: 1rem;
-  }
-
-  .progressBar {
-    width: 100px;
-    height: 8px;
-  }
-
-  .percentage {
-    font-size: 0.75rem;
-  }
-}
-
-/* Media Queries */
-@media screen and (max-width: 920px) {
-  .skillBox {
-    flex: 1 1 100%;
-    /* full width on small screens */
-  }
-
-  .progressBar {
-    width: 100px;
-    height: 8px;
-  }
-
-  .percentage {
-    font-size: 3vw;
+  .skillsBarHeader {
+    width: 1fr;
   }
 }
