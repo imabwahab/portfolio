@@ -7,11 +7,21 @@ import '../Navbar/Navbar.css'
 import { Link } from 'react-scroll'
 import menu from '../../assets/menu.png'
 import coloredmenu from '../../assets/coloredlogo.png';
+import close from '../../assets/close.png'
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   return (
+
+
     <nav className="navbar">
+
+      {/* Preload images */}
+      <img src={coloredmenu} alt="menu preload" style={{ display: 'none' }} />
+      <img src={close} alt="close preload" style={{ display: 'none' }} />
+
+      {/* Navbar Code Starts from here. */}
+
       <img src={W} alt="Logo" className='logo' />
 
       <div className="desktopMenu">
@@ -27,9 +37,15 @@ function Navbar() {
       </a>
 
 
-      <img src={coloredmenu} className='mobMenu' onClick={() => setShowMenu(!showMenu)} />
+      <img
+        src={!showMenu ? coloredmenu : close} className='mobMenu'
+        onClick={() => setShowMenu(!showMenu)}
+        alt="Toggle menu"
+        aria-label="Toggle mobile menu"
+      />
+
       <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
-        
+
         <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Home</Link>
 
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Skills</Link>
@@ -38,6 +54,9 @@ function Navbar() {
 
         <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Contact</Link>
       </div>
+
+
+
     </nav>
   )
 }

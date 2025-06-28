@@ -4,7 +4,8 @@ import vmrm from '../../assets/vmrm.png';
 import geminiClone from '../../assets/geminiClone.png';
 import UGH from '../../assets/ugh.png';
 import { useState } from 'react';
-
+import { FiEye } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa6";
 
 const Works = () => {
     const [showList, setShowList] = useState(false);
@@ -15,27 +16,62 @@ const Works = () => {
             <span className='worksDesc'>Here is the list of projects that i have worked on.</span>
             <div className='worksImgs'>
 
-                <div className='projectCard' >
-                    <a href='https://vehicle-maintenance-repairing-manag.vercel.app/' target='_blank' rel='noopener noreferrer'>
-                        <img src={vmrm} alt='VMRM' className='worksImg' />
-                    </a>
-                    <p className='projectTitle'>VMRM</p>
-                </div>
 
                 <div className='projectCard'>
-                    <a href="https://imabwahab.github.io/Gemini-Clone/" target='_blank'>
-                        <img src={geminiClone} alt='Gemini-Clone' className='worksImg' />
-                    </a>
-                    <p className='projectTitle'>Gemini-Clone</p>
+
+                    <img src={UGH} alt='Gaming Hub' className='worksImg'
+                        loading='lazy' />
+                    <p className='projectTitle'>Gaming Hub</p>
+                    <div className="linkBtns">
+                        <a href="https://imabwahab.github.io/Gaming-Hub/" target="_blank" rel="noopener noreferrer" className="fancyBtn">
+                            <FiEye />
+                            <span>Live Preview</span>
+                        </a>
+                        <a href="https://github.com/imabwahab/Gaming-Hub.git" target="_blank" rel="noopener noreferrer" className="fancyBtn">
+                            <FaGithub />
+                            <span>Code</span>
+                        </a>
+                    </div>
                 </div>
 
 
-                {showList ? <div className='projectCard' >
-                    <a href=" https://imabwahab.github.io/Gaming-Hub/" target='_blank'>
-                        <img src={UGH} alt='Ultimate Gaming Hub' className='worksImg' />
-                    </a>
-                    <p className='projectTitle'>Gaming Hub</p>
-                </div> : null}
+
+                <div className='projectCard'>
+
+                    <img src={geminiClone} alt='Gemini-Clone' className='worksImg'
+                        loading='lazy' />
+                    <p className='projectTitle'>Gemini-Clone</p>
+                    <div className="linkBtns">
+                        <a href="https://imabwahab.github.io/Gemini-Clone/" target="_blank" rel="noopener noreferrer" className="fancyBtn">
+                            <FiEye />
+                            <span>Live Preview</span>
+                        </a>
+                        <a href="https://github.com/imabwahab/Gemini-Clone" target="_blank" rel="noopener noreferrer" className="fancyBtn">
+                            <FaGithub />
+                            <span>Code</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                {showList ? <div className='projectCard'>
+
+                    <img src={vmrm} alt='VMRM' className='worksImg'
+                        loading='lazy' />
+                    <p className='projectTitle'>VMRM</p>
+                    <div className="linkBtns">
+                        <a href="https://vehicle-maintenance-repairing-manag.vercel.app/" target="_blank" rel="noopener noreferrer" className="fancyBtn">
+                            <FiEye />
+                            <span>Live Preview</span>
+                        </a>
+                        <a href="https://github.com/imabwahab/Vehicle-Maintenance-Repairing-Management.git" target="_blank" rel="noopener noreferrer" className="fancyBtn">
+                            <FaGithub />
+                            <span>Code</span>
+                        </a>
+                    </div>
+                </div>
+                    : null}
 
             </div>
             {showList ? <button className='workBtn' onClick={() => setShowList(!showList)}>Reduce</button> : <button className='workBtn' onClick={() => setShowList(!showList)}>See More</button>}
@@ -44,6 +80,3 @@ const Works = () => {
 }
 
 export default Works;
-
-
-// https://drive.google.com/file/d/1qDgzBzD3WNFkeIWaePoW9qmYez7RJ53R/view?usp=drive_link
