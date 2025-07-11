@@ -63,6 +63,75 @@
 }
 
 
+.HTML {
+  color: #E44D26;
+}
+
+/* CSS - blue */
+.CSS {
+  color: #264DE4;
+}
+
+/* JavaScript - yellow */
+.JavaScript {
+  color: #F0DB4F;
+}
+
+/* React - light blue */
+.React {
+  color: #61DBFB;
+}
+
+/* Bootstrap - purple */
+.Bootstrap {
+  color: #7952B3;
+}
+
+/* Tailwind CSS - cyan */
+.TailwindCSS {
+  color: #38BDF8;
+}
+
+/* Node.js - green */
+.NodeJS {
+  color: #3C873A; /* Official Node.js green */
+}
+
+/* Express.js - usually black/gray */
+.ExpressJS {
+  color: #fdfdfd; /* Express typically uses plain black */
+}
+
+
+/* MySQL - orange/navy mix */
+.MySQL {
+  color: #00758F; /* MySQL deep blue */
+}
+
+/* MongoDB - green */
+.MongoDB {
+  color: #47A248; /* MongoDB green */
+}
+
+.Git {
+  color: #F1502F;
+}
+.GitHub {
+  color: #181717;              /* GitHub's official dark color */
+  background-color: #eaeaea;   /* Soft light gray for contrast */
+  border-radius: 60%;
+  border: none;
+}
+
+.Netlify {
+  color: #00C7B7;
+}
+.Vercel {
+  color: #f0f0f0;              /* Official Vercel black */
+}
+
+
+
 @media screen and (max-width: 600px) {
   .skillBox {
     flex: 1 1 100%;

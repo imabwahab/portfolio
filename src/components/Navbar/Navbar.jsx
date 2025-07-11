@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import W from '../../assets/W.png'
 
 import { HiOutlineDocumentText } from "react-icons/hi";
 import '../Navbar/Navbar.css'
 import { Link } from 'react-scroll'
-import menu from '../../assets/menu.png'
 import coloredmenu from '../../assets/coloredlogo.png';
 import close from '../../assets/close.png'
 
@@ -28,7 +27,8 @@ function Navbar() {
         <Link className="desktopMenuItem" activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500}>Home</Link>
         <Link className="desktopMenuItem" activeClass='active' to='skills' spy={true} smooth={true} offset={-40} duration={500}>Skills</Link>
         <Link className="desktopMenuItem" activeClass='active' to='works' spy={true} smooth={true} offset={-80} duration={500} >Projects</Link>
-        <Link className="desktopMenuItem" activeClass='active' to='contactPage' spy={true} smooth={true} offset={-80} duration={500} >Contact</Link>
+        <Link className="desktopMenuItem" activeClass='active' to='clients' spy={true} smooth={true} offset={-70} duration={500} >Clients</Link>
+        <Link className="desktopMenuItem" activeClass='active' to='contactPage' spy={true} smooth={true} offset={-70} duration={500} >Contact</Link>
 
       </div>
 
@@ -39,7 +39,9 @@ function Navbar() {
 
       <img
         src={!showMenu ? coloredmenu : close} className='mobMenu'
-        onClick={() => setShowMenu(!showMenu)}
+        onClick={() => {
+          setShowMenu(!showMenu)
+        }}
         alt="Toggle menu"
         aria-label="Toggle mobile menu"
       />
@@ -51,6 +53,8 @@ function Navbar() {
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Skills</Link>
 
         <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Projects</Link>
+
+        <Link activeClass='active' to='clients' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Clients</Link>
 
         <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Contact</Link>
       </div>

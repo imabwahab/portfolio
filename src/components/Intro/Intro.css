@@ -3,12 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
+  min-height: 95vh;
   position: relative;
   margin-top: 50px;
   padding: 0 10%;
   width: 100%;
 }
+
 
 
 .background {
@@ -126,7 +127,8 @@
     padding: 1rem;
   }
   .background .bg-img{
-    opacity: 0.5;
+    opacity: 0.4;
+    height: 100%;
   }
   .introContent {
     padding: 1rem;
@@ -150,3 +152,4 @@
     padding: 0.6rem 1.2rem;
   }
 }
+

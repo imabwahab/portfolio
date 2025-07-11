@@ -1,0 +1,92 @@
+#clients {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 60rem;
+  margin: auto;
+  border-top: 1.5px solid #00e0ff;
+}
+
+.contactPageTitle {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.clientDesc {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.clientCards {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.clientCard {
+  width: 150px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.clientCard:hover {
+  transform: scale(1.05);
+}
+
+/* Brand-specific background colors */
+.walmart {
+  background-color: #0071ce; /* Walmart Blue */
+}
+
+.adobe {
+  background-color: #ff0000; /* Adobe Red */
+}
+
+.microsoft {
+  background-color: #f35325; /* Microsoft Orange */
+}
+
+.facebook {
+  background-color: #1877f2; /* Facebook Blue */
+}
+
+.clientIcon {
+  color: white;
+  font-size: 3rem;
+}
+
+.summaryCard {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 2rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00e0ff, #0071ce);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 224, 255, 0.3);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.summaryItem {
+  flex: 1 1 200px;
+}
+
+.summaryItem h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.summaryItem p {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+}

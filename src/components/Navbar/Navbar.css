@@ -12,7 +12,7 @@
   right: 0;
   z-index: 3;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   background: linear-gradient(to right,
       rgba(15, 32, 39, 0.8),
       rgba(30, 60, 100, 0.8),
@@ -92,6 +92,7 @@
       rgba(15, 32, 39, 1));
   color: #f0f0f0;
   border-radius: 1rem;
+    border:  1.5px solid  #00e0ff;
 }
 
 .listItem {
@@ -110,7 +111,6 @@
   .navbar{
     padding: 1rem;
     height: 3.7rem;
-    overflow: hidden;
   }
   .download-link {
   display: none;

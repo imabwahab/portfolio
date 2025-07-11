@@ -1,5 +1,6 @@
 #contactPage {
-    min-height: calc(100vh - 6rem) ;
+    border-top: 1.5px solid #00e0ff;
+    min-height: calc(100vh - 6rem);
     height: 100%;
     max-width: 60rem;
     margin: 0 auto;
@@ -103,8 +104,9 @@
     height: 3rem;
     width: 3rem;
     margin: 0 0.75rem;
-    background-color: rgb(30, 30, bl30ue);
+    background-color: rgb(30, crimson, blue);
     color: rgb(250, 250, 232);
+    display: inline-block;
 }
 
 .twitter {
@@ -132,4 +134,12 @@
     color: white;
     padding: 4px;
     border-radius: 10px;
+}
+
+.whatsapp {
+    background-color: #25D366;
+    padding: 6px;
+    border-radius: 10px;
+    display: inline-block;
+    color: white;
 }

@@ -3,7 +3,7 @@ import './SkillCard.css'
 function SkillCard({IconComponent, skillTitle, skillPercentage }) {
   return (
     <div className='skillBox' >
-      <IconComponent className='icon' />
+      <IconComponent className={`icon ${skillTitle}`} />
       <div className='skillBarText'>
         <h2>{skillTitle}</h2>
         <div className='progressBar'>

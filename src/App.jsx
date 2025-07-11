@@ -1,3 +1,4 @@
+import Clients from "./components/Clients/Clients.jsx"
 import Contact from "./components/Contact/contact.jsx"
 import Footer from "./components/Footer/Footer.jsx"
 import Intro from "./components/Intro/Intro.jsx"
@@ -14,6 +15,7 @@ function App() {
         <Intro />
         <Skills />
         <Project />
+        <Clients />
         <Contact />
       </div>
       <Footer />
