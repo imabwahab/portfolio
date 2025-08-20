@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+}
+/* styles.css */
+
+:root {
+  --primary: theme('colors.white');
+  --secondary: theme('colors.gray.100');
+  --tertiary: theme('colors.gray.300');
+  --surface: theme('colors.gray.900');
+  --accent: theme('colors.blue.600');
+}
+
+.dark {
+  --primary: theme('colors.gray.900');
+  --secondary: theme('colors.gray.800');
+  --tertiary: theme('colors.gray.700');
+  --surface: theme('colors.white');
+  --accent: theme('colors.blue.400');
+}
