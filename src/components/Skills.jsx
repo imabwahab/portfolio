@@ -9,7 +9,7 @@ import { frontEndSkills, backendSkills, devopsSkills, databaseSkills } from "../
 function Skills() {
 
   return (
-    <section id='skills' className=" py-10 px-6 md:px-30  text-white ">
+    <section id='skills' className=" py-10 px-6 md:px-15 lg:px-30  text-white ">
       <h2 className="text-4xl font-bold text-primary-txt dark:text-[#FFF5E4] text-center mb-4">Skills</h2>
       <p className="text-center text-[#5C7285] dark:text-gray-300 max-w-3xl mx-auto mb-10">
         My technical expertise spans frontend, backend, and database development,

@@ -42,7 +42,7 @@ function HeroSection() {
           </a>
 
           <Link
-            to="projects"
+            to="Projects"
             smooth={true}
             duration={500}
             className="cursor-pointer text-indigo-600 hover:underline font-medium"
