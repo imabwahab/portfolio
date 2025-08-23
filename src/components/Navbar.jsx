@@ -1,52 +1,39 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaUserAlt, FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+import { GrDocumentDownload } from "react-icons/gr";
 import { Link } from 'react-scroll';
-import W from '../assets/W.png'
+import logo from '../assets/logo.png'
+import { navLinks } from '../assets/data.js'
 
-function Navbar() {
+function Navbar({ darkMode, setDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  // Toggle dark mode class on <html>
-  useEffect(() => {
-    const root = document.documentElement;
-    root.classList.toggle('dark', darkMode);
-  }, [darkMode]);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
 
-  const navLinks = [
-    { name: 'Home', to: 'intro' },
-    { name: 'Skills', to: 'skills' },
-    { name: 'Projects', to: 'projects' },
-    { name: 'Contact', to: 'contact' },
-  ];
+
 
   return (
-    <nav className="bg-primary text-surface dark:bg-gray-900 dark:text-white shadow-md fixed w-full z-50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
+    <nav className="text-primary-txt  dark:bg-dark-midnight bg-gray-100 dark:text-white shadow-md fixed top-0 h-[66px] w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
         <img
-          src={W}
+          src={logo}
           alt="Logo"
-          className="h-8 w-auto object-contain select-none"
+          className="h-10 w-auto object-contain select-none"
         />
 
-
-
-        {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
           {navLinks.map(({ name, to }) => (
             <Link
               key={name}
-              className="text-lg font-medium hover:text-accent cursor-pointer transition-colors duration-300"
+              className="text-lg font-bold hover:text-primary-txt dark:hover:text-[#ccc5b9] cursor-pointer transition-colors duration-300 "
               to={to}
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-60}
               duration={500}
-              activeClass="text-accent"
+              activeClass="text-primary-txt dark:text-[#ccc5b9] pb-[2px] border-b-2"
             >
               {name}
             </Link>
@@ -55,9 +42,10 @@ function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4 text-xl">
-          <FaUserAlt className="cursor-pointer hover:text-accent transition-colors duration-200" />
+          <FaUserAlt className="cursor-pointer dark:hover:text-accent transition-colors duration-200" />
+          <GrDocumentDownload className="cursor-pointer dark:hover:text-accent transition-colors duration-200" />
           <button onClick={toggleDarkMode} className="focus:outline-none">
-            {darkMode ? <FaSun className="hover:text-accent" /> : <FaMoon className="hover:text-accent" />}
+            {darkMode ? <FaSun className=" dark:hover:text-accent" /> : <FaMoon className=" hover:dark:hover:text-accent" />}
           </button>
         </div>
 
@@ -71,11 +59,11 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pt-4 pb-6 space-y-4 bg-primary dark:bg-gray-800 text-lg rounded-b-md shadow-lg">
+        <div className="md:hidden px-4 pt-4 pb-6 space-y-4 text-white/80 bg-dark-midnight/100 text-lg rounded-b-md shadow-lg">
           {navLinks.map(({ name, to }) => (
             <Link
               key={name}
-              className="block py-2 hover:text-accent transition-colors duration-300"
+              className="block py-2 font-bold hover:text-accent transition-colors duration-300"
               to={to}
               spy={true}
               smooth={true}
@@ -90,6 +78,7 @@ function Navbar() {
           <div className="flex items-center gap-4 pt-4 border-t border-gray-300 dark:border-gray-700">
 
             <FaUserAlt className="cursor-pointer hover:text-accent" />
+            <GrDocumentDownload className="cursor-pointer hover:text-accent" />
             <button onClick={toggleDarkMode} className="focus:outline-none text-xl">
               {darkMode ? <FaSun className="hover:text-accent" /> : <FaMoon className="hover:text-accent" />}
             </button>

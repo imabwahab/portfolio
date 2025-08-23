@@ -1,26 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Numans&family=Outfit:wght@100..900&display=swap');
+
+
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  font-family: "Outfit", sans-serif;
+
+}
 
 @theme {
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-tertiary: var(--tertiary);
-  --color-accent: var(--accent);
-  --color-surface: var(--surface);
-}
-/* styles.css */
+  /* 🌤️ Light Colors */
+  --color-light-primary: #5bc0be;
+  /* Aqua Teal */
+  --color-light-sky: #caf0f8;
+  /* Light Sky Blue */
+  --color-light-mint: #83c5be;
+  /* Soft Mint */
+  --color-light-sage: #abc4ab;
+  /* Sage Green */
+  --color-light-blush: #f4dbd8;
+  /* Soft Blush */
+  --color-light-bg: #f8f9fa;
+  /* Soft Background */
+  --color-light-gray: #dee2e6;
+  /* Light Gray */
 
-:root {
-  --primary: theme('colors.white');
-  --secondary: theme('colors.gray.100');
-  --tertiary: theme('colors.gray.300');
-  --surface: theme('colors.gray.900');
-  --accent: theme('colors.blue.600');
+  /* 🌑 Dark Colors */
+  --color-dark-primary: #0f2027;
+  /* Jet Black */
+  --color-dark-secondary: #023047;
+  /* Ocean Blue */
+  --color-dark-midnight: #003049;
+  /* Midnight Blue */
+  --color-dark-slate: #335c67;
+  /* Slate Teal */
+  --color-dark-navy: #001d3d;
+  /* Deep Navy */
+  --color-dark-charcoal: #212529;
+  /* Charcoal Black */
+  --color-dark-gray: #495057;
+  /* Dark Gray */
+
+  /* 🎯 Accent Colors */
+  --color-accent: #f4dbd8;
+  /* Blush */
+  --color-accent-red: #ff6b6b;
+  /* For errors or highlights */
+  --color-accent-yellow: #ffb703;
+  /* For attention areas */
+  --color-accent-blue: #219ebc;
+  /* For links, buttons, etc. */
+
+  --color-primary-txt: #0D5EA6;
+  --color-secondary-txt: #077A7D; 
 }
 
-.dark {
-  --primary: theme('colors.gray.900');
-  --secondary: theme('colors.gray.800');
-  --tertiary: theme('colors.gray.700');
-  --surface: theme('colors.white');
-  --accent: theme('colors.blue.400');
+.HTML {
+  color: #E44D26;
+}
+
+.CSS {
+  color: #264DE4;
+}
+
+.JavaScript {
+  color: #F0DB4F;
+}
+
+.React {
+  color: #61DBFB;
+}
+
+.Bootstrap {
+  color: #7952B3;
+}
+
+.TailwindCSS {
+  color: #38BDF8;
+}
+
+.NodeJS {
+  color: #3C873A;
+}
+
+.ExpressJS {
+  color: #fdfdfd;
+}
+
+.MySQL {
+  color: #00758F;
+}
+
+.MongoDB {
+  color: #47A248;
+}
+
+.Git {
+  color: #F1502F;
+}
+
+.GitHub {
+  color: #181717;
+  background-color: #eaeaea;
+  border-radius: 9999px;
+}
+
+.Netlify {
+  color: #00C7B7;
+}
+
+.Vercel {
+  color: #f0f0f0;
 }
