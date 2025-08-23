@@ -16,25 +16,25 @@ export const navLinks = [
 export const frontEndSkills = [
   { icon: FaHtml5, skillTitle: 'HTML', skillPercentage: '70%' },
   { icon: FaCss3Alt, skillTitle: 'CSS', skillPercentage: '70%' },
-  { icon: IoLogoJavascript, skillTitle: 'JavaScript', skillPercentage: '60%' },
+  { icon: IoLogoJavascript, skillTitle: 'JavaScript', skillPercentage: '70%' },
   { icon: FaReact, skillTitle: 'React', skillPercentage: '70%' },
-  { icon: FaBootstrap, skillTitle: 'Bootstrap', skillPercentage: '60%' },
-  { icon: RiTailwindCssFill, skillTitle: 'TailwindCSS', skillPercentage: '60%' },
+  { icon: FaBootstrap, skillTitle: 'Bootstrap', skillPercentage: '70%' },
+  { icon: RiTailwindCssFill, skillTitle: 'TailwindCSS', skillPercentage: '70%' },
 ];
 
 export const databaseSkills = [
   { icon: BsFiletypeSql, skillTitle: 'MySQL', skillPercentage: '70%' },
-  { icon: BiLogoMongodb, skillTitle: 'MongoDB', skillPercentage: '60%' }
+  { icon: BiLogoMongodb, skillTitle: 'MongoDB', skillPercentage: '70%' }
 ];
 
 export const backendSkills = [
   { icon: FaNode, skillTitle: 'NodeJS', skillPercentage: '70%' },
-  { icon: SiExpress, skillTitle: 'ExpressJS', skillPercentage: '60%' }
+  { icon: SiExpress, skillTitle: 'ExpressJS', skillPercentage: '70%' }
 ];
 
 export const devopsSkills = [
   { icon: FaGitAlt, skillTitle: 'Git', skillPercentage: '70%' },
-  { icon: FaGithub, skillTitle: 'GitHub', skillPercentage: '60%' },
+  { icon: FaGithub, skillTitle: 'GitHub', skillPercentage: '70%' },
   { icon: BiLogoNetlify, skillTitle: 'Netlify', skillPercentage: '70%' },
   { icon: IoLogoVercel, skillTitle: 'Vercel', skillPercentage: '70%' }
 ];

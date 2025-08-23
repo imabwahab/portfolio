@@ -59,15 +59,15 @@ function Navbar({ darkMode, setDarkMode }) {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pt-4 pb-6 space-y-4 text-white/80 bg-dark-midnight/100 text-lg rounded-b-md shadow-lg">
+        <div className="md:hidden px-4 pt-4 pb-6 space-y-4 text-primary-txt dark:text-white/80  bg-gray-100 dark:bg-dark-midnight text-lg rounded-b-md shadow-lg">
           {navLinks.map(({ name, to }) => (
             <Link
               key={name}
-              className="block py-2 font-bold hover:text-accent transition-colors duration-300"
+              className="block py-1 font-bold hover:text-accent transition-colors duration-300"
               to={to}
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-70}
               duration={500}
               onClick={() => setMenuOpen(false)}
             >

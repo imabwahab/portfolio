@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <section
       id="HeroSection"
-      className="w-full h-auto py-8 px-10 md:px-16 flex flex-col-reverse gap-10 md:flex-row items-center justify-center "
+      className="w-full h-auto py-8 px-5 md:px-5 flex flex-col-reverse gap-10 md:flex-row items-center justify-center "
     >
 
 
