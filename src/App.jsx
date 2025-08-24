@@ -3,7 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar.jsx';
 import HeroSection from './components/HeroSection.jsx';
 import Skills from './components/Skills.jsx';
-import Projects from './components/Projects.jsx'
+import Projects from './components/Projects.jsx';
+import Footer from './components/Footer.jsx';
+import Contact from './components/Contact.jsx';
 
 function App() {
 
@@ -15,7 +17,9 @@ function App() {
         <HeroSection />
         <Skills />
         <Projects />
+        <Contact />
       </div>
+      <Footer />
     </div>
 
   )

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Numans&family=Outfit:wght@100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+
 
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -10,21 +13,7 @@
 }
 
 @theme {
-  /* 🌤️ Light Colors */
-  --color-light-primary: #ccc5b9;
-  /* Aqua Teal */
-  --color-light-sky: #caf0f8;
-  /* Light Sky Blue */
-  --color-light-mint: #83c5be;
-  /* Soft Mint */
-  --color-light-sage: #abc4ab;
-  /* Sage Green */
-  --color-light-blush: #f4dbd8;
-  /* Soft Blush */
-  --color-light-bg: #f8f9fa;
-  /* Soft Background */
-  --color-light-gray: #dee2e6;
-  /* Light Gray */
+ 
 
   /* 🌑 Dark Colors */
   --color-dark-primary: #0f2027;
@@ -37,24 +26,10 @@
   /* Slate Teal */
   --color-dark-navy: #001d3d;
   /* Deep Navy */
-  --color-dark-charcoal: #212529;
-  /* Charcoal Black */
-  --color-dark-gray: #495057;
-  /* Dark Gray */
-
-  /* 🎯 Accent Colors */
-  --color-accent: #f4dbd8;
-  /* Blush */
-  --color-accent-red: #ff6b6b;
-  /* For errors or highlights */
-  --color-accent-yellow: #ffb703;
-  /* For attention areas */
-  --color-accent-blue: #219ebc;
-  /* For links, buttons, etc. */
 
   --color-primary-txt: #0D5EA6;
   --color-primary-txt-light: #FFF5E4;
-  --color-secondary-txt: #077A7D; 
+  --color-secondary-txt: #077A7D;
 }
 
 .HTML {

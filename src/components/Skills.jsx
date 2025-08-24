@@ -19,8 +19,8 @@ function Skills() {
       {/* Skill Category Block */}
       <div className="space-y-12 ">
 
-        {/* Frontend */}
-        <div className="bg-gray-300/90 dark:bg-dark-midnight/10 rounded-lg shadow-2xl overflow-hidden">
+         {/* FrontEnd */}
+        <div className="bg-white/40 dark:bg-dark-midnight/10 rounded-lg shadow-2xl overflow-hidden">
           {/* Section Header */}
           <div className="bg-gradient-to-r from-[#1E1EE6] via-[#A6CDC6]  to-[#FC466B] py-6 flex items-center justify-center gap-4  border-gray-700 text-primary-txt dark:text-primary-txt">
             <FaLaptopCode className="text-3xl " />
@@ -43,7 +43,7 @@ function Skills() {
 
 
         {/* Backend */}
-        <div className="bg-gray-300/90 dark:bg-dark-midnight/10 rounded-lg shadow-2xl overflow-hidden">
+        <div className="bg-white dark:bg-dark-midnight/10 rounded-lg shadow-2xl overflow-hidden">
           {/* Section Header */}
           <div className="bg-gradient-to-r from-[#1E1EE6] via-[#A6CDC6]  to-[#FC466B] py-6 flex items-center justify-center gap-4  border-gray-700 text-primary-txt dark:text-primary-txt">
             <IoSettingsOutline className="text-3xl " />
@@ -64,7 +64,7 @@ function Skills() {
         </div>
 
         {/* Databases */}
-        <div className="bg-gray-300/90 dark:bg-dark-midnight/10 rounded-lg shadow-2xl overflow-hidden">
+        <div className="bg-white dark:bg-dark-midnight/10 rounded-lg shadow-2xl overflow-hidden">
           {/* Section Header */}
           <div className="bg-gradient-to-r from-[#1E1EE6] via-[#A6CDC6]  to-[#FC466B] py-6 flex items-center justify-center gap-4  border-gray-700 text-primary-txt dark:text-primary-txt">
             <TbDatabaseShare className="text-3xl " />
@@ -85,9 +85,9 @@ function Skills() {
         </div>
 
         {/* Tools */}
-        <div className="bg-gray-300/90 dark:bg-dark-midnight/10 rounded-lg shadow-2xl overflow-hidden">
+        <div className="bg-white dark:bg-dark-midnight/10 rounded-lg shadow-2xl overflow-hidden">
           {/* Section Header */}
-          <div className="bg-gradient-to-r from-[#1E1EE6] via-[#A6CDC6]  to-[#FC466B] py-6 flex items-center justify-center gap-4  border-gray-700 text-primary-txt dark:text-primary-txt">
+          <div className="bg-gradient-to-r from-[#1E1EE6] via-[#07eb4f]  to-[#FC466B] py-6 flex items-center justify-center gap-4  border-gray-700 text-primary-txt dark:text-primary-txt">
             <GoTools className="text-3xl " />
             <h3 className="text-3xl font-bold tracking-wide">DevOps</h3>
           </div>

@@ -38,3 +38,34 @@ export const devopsSkills = [
   { icon: BiLogoNetlify, skillTitle: 'Netlify', skillPercentage: '70%' },
   { icon: IoLogoVercel, skillTitle: 'Vercel', skillPercentage: '70%' }
 ];
+
+
+// project pictures
+import vmrm from "./vmrm.png";
+import geminiClone from "./geminiClone.png";
+import UGH from "./ugh.png";
+import BlogPlatform from "./BlogPlatform.png";
+
+
+export  const projectData = [{
+    name: 'Gaming Hub',
+    pic: UGH,
+    preview: 'https://imabwahab.github.io/Gaming-Hub/',
+    github: 'https://github.com/imabwahab/Gaming-Hub.git'
+  }, {
+    name: 'Gemini Clone',
+    pic: geminiClone,
+    preview: 'https://imabwahab.github.io/Gemini-Clone/',
+    github: 'https://github.com/imabwahab/Gemini-Clone'
+  }, {
+    name: 'Blog Platform',
+    pic: BlogPlatform,
+    preview: '#',
+    github: '#'
+  }, {
+    name: 'VMRM',
+    pic: vmrm,
+    preview: 'https://vehicle-maintenance-repairing-manag.vercel.app/',
+    github: 'https://github.com/imabwahab/Vehicle-Maintenance-Repairing-Management.git'
+
+  }];

@@ -1,5 +1,5 @@
 import profile from '../assets/profile.png';
-import { HiOutlineDocumentText } from "react-icons/hi";
+import { GrDocumentDownload } from "react-icons/gr";
 import { Link } from 'react-scroll';
 
 function HeroSection() {
@@ -33,11 +33,11 @@ function HeroSection() {
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <a
-            href="/portfolio/cv.pdf"
-            download="cv.pdf"
-            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded transition duration-300"
+            // href="/portfolio/cv.pdf"
+            // download="cv.pdf"
+            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded transition duration-300 cursor-pointer"
           >
-            <HiOutlineDocumentText size={20} />
+            <GrDocumentDownload size={20} />
             CV
           </a>
 
@@ -45,7 +45,7 @@ function HeroSection() {
             to="Projects"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-indigo-600 hover:underline font-medium"
+            className="cursor-pointer text-indigo-600 dark:text-white hover:underline font-medium"
           >
             View My Projects
           </Link>
