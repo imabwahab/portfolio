@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { FiEye } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa6";
 import { projectData } from '../assets/data.js'
-
 
 const Projects = () => {
   // const [showList, setShowList] = useState(false);
@@ -20,7 +18,7 @@ const Projects = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="mt-10 grid gap-8 md:grid-cols-2 ">
+      <div className="mt-10 grid gap-8 lg:gap-12 sm:grid-cols-2 ">
 
         {projectData.map((project) => {
           return (

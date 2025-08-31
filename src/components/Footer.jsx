@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter, FaFacebookF, FaInstagram } from "react-icons/fa6";
 import { Link } from "react-scroll";
 import { navLinks } from "../assets/data.js";
@@ -85,7 +85,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>FaInstagram
+      </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-300 dark:border-gray-700 text-center py-4 text-sm text-gray-600 dark:text-gray-400">

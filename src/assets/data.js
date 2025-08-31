@@ -42,30 +42,36 @@ export const devopsSkills = [
 
 // project pictures
 import vmrm from "./vmrm.png";
-import geminiClone from "./geminiClone.png";
+import FormAI from "./FormAI.png";
 import UGH from "./ugh.png";
 import BlogPlatform from "./BlogPlatform.png";
+import ChatApp from "./ChatApp.png"
 
 
-export  const projectData = [{
-    name: 'Gaming Hub',
-    pic: UGH,
-    preview: 'https://imabwahab.github.io/Gaming-Hub/',
-    github: 'https://github.com/imabwahab/Gaming-Hub.git'
-  }, {
-    name: 'Gemini Clone',
-    pic: geminiClone,
-    preview: 'https://imabwahab.github.io/Gemini-Clone/',
-    github: 'https://github.com/imabwahab/Gemini-Clone'
-  }, {
-    name: 'Blog Platform',
-    pic: BlogPlatform,
-    preview: '#',
-    github: '#'
-  }, {
-    name: 'VMRM',
-    pic: vmrm,
-    preview: 'https://vehicle-maintenance-repairing-manag.vercel.app/',
-    github: 'https://github.com/imabwahab/Vehicle-Maintenance-Repairing-Management.git'
+export const projectData = [{
+  name: 'Generative AI',
+  pic: FormAI,
+  preview: 'https://generative-ai-gray.vercel.app/',
+  github: 'https://github.com/imabwahab/Generative-AI.git'
+}, {
+  name: 'Blog Platform',
+  pic: BlogPlatform,
+  preview: 'https://blog-source-pink.vercel.app/',
+  github: 'https://github.com/imabwahab/blog-source.git'
+}, {
+  name: 'Chat App',
+  pic: ChatApp,
+  preview: 'https://quick-chat-teal-eight.vercel.app/',
+  github: 'https://github.com/imabwahab/Quick-Chat.git'
+}, {
+  name: 'Gaming Hub',
+  pic: UGH,
+  preview: 'https://imabwahab.github.io/Gaming-Hub/',
+  github: 'https://github.com/imabwahab/Gaming-Hub.git'
+}, {
+  name: 'VMRM',
+  pic: vmrm,
+  preview: 'https://vehicle-maintenance-repairing-manag.vercel.app/',
+  github: 'https://github.com/imabwahab/Vehicle-Maintenance-Repairing-Management.git'
 
-  }];
+}];
