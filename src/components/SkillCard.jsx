@@ -19,17 +19,17 @@ function SkillCard({ IconComponent, skillTitle, skillPercentage }) {
 
       <div className="flex flex-col justify-center flex-1">
         <h2 className=" text-lg font-semibold">{skillTitle}</h2>
-
+{/* 
         <div className="w-4/5 bg-gray-300 rounded-md h-[10px] mt-2 overflow-hidden sm:w-[100px] sm:h-[8px]">
           <div
             className="bg-green-500 h-full rounded-md transition-all duration-500 ease-in-out"
             style={{ width: skillPercentage }}
           />
         </div>
-        <span className="text-sm mt-1 sm:text-xs">proficiency: {skillPercentage}</span>
+        <span className="text-sm mt-1 sm:text-xs">proficiency: {skillPercentage}</span> */}
       </div>
     </div>
-  );
+  )
 }
 
 export default SkillCard;
