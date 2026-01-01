@@ -3,15 +3,12 @@ import { FaUserAlt, FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
 import { GrDocumentDownload } from "react-icons/gr";
 import { Link } from 'react-scroll';
 import logo from '../assets/logo.png'
-import { navLinks } from '../assets/data.js'
 
-function Navbar({ darkMode, setDarkMode }) {
+function Navbar({ navLinks, darkMode, setDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
-
-
 
   return (
     <nav className="text-primary-txt  dark:bg-dark-midnight bg-gray-100 dark:text-white shadow-md fixed top-0 h-[66px] w-full z-50">
@@ -27,16 +24,23 @@ function Navbar({ darkMode, setDarkMode }) {
           {navLinks.map(({ name, to }) => (
             <Link
               key={name}
-              className="text-lg font-bold hover:text-primary-txt dark:hover:text-[#ccc5b9] cursor-pointer transition-colors duration-300 "
               to={to}
               spy={true}
               smooth={true}
-              offset={-60}
+              offset={-100}
               duration={500}
-              activeClass="text-primary-txt dark:text-[#ccc5b9] pb-[2px] border-b-2"
+              activeClass="nav-active"
+              className="
+                relative px-4 py-2 rounded-lg
+                text-lg font-bold cursor-pointer
+                text-primary-txt dark:text-white/80
+                hover:text-white
+                transition-all duration-300 ease-in-out
+              "
             >
               {name}
             </Link>
+
           ))}
         </div>
 
@@ -59,20 +63,27 @@ function Navbar({ darkMode, setDarkMode }) {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pt-4 pb-6 space-y-4 text-primary-txt dark:text-white/80  bg-gray-100 dark:bg-dark-midnight text-lg rounded-b-md shadow-lg">
+        <div className="md:hidden px-4 flex flex-col pt-4 pb-6 space-y-4 text-primary-txt dark:text-white/80  bg-gray-100 dark:bg-dark-midnight text-lg rounded-b-md shadow-lg">
           {navLinks.map(({ name, to }) => (
             <Link
               key={name}
-              className="block py-1 font-bold hover:text-accent transition-colors duration-300"
               to={to}
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-60}
               duration={500}
-              onClick={() => setMenuOpen(false)}
+              activeClass="nav-active"
+              className="
+                relative px-4 py-2 w-max rounded-full
+                text-lg font-bold cursor-pointer
+                text-primary-txt dark:text-white/80
+                hover:text-white
+                transition-all duration-300 ease-in-out
+              "
             >
               {name}
             </Link>
+
           ))}
 
           <div className="flex items-center gap-4 pt-4 border-t border-gray-300 dark:border-gray-700">

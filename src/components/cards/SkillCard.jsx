@@ -42,17 +42,17 @@ function SkillCard({ IconComponent, skillTitle, skillPercentage }) {
       </h2>
 
       {/* Progress Bar */}
-      <div className="w-full h-2 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
+      {/* <div className="w-full h-2 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
         <div
           style={{ width: `${skillPercentage}%` }}
           className="h-full bg-gradient-to-r from-[#0D5EA6] to-[#077A7D] rounded-full"
         ></div>
-      </div>
+      </div> */}
 
       {/* Percentage Text */}
-      <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 font-medium">
+      {/* <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 font-medium">
         {skillPercentage}%
-      </p>
+      </p> */}
     </div>
   );
 }

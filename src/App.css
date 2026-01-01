@@ -1,19 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Numans&family=Outfit:wght@100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Stack+Sans+Text:wght@200..700&display=swap');
 
 
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
 * {
-  font-family: "Outfit", sans-serif;
-
+  font-family: "Alan Sans", sans-serif;
 }
 
 @theme {
- 
 
   /* 🌑 Dark Colors */
   --color-dark-primary: #0f2027;
@@ -76,10 +73,17 @@
   color: #F1502F;
 }
 
+.dark .Git{
+  color: white;
+}
+
 .GitHub {
   color: #181717;
   background-color: #eaeaea;
   border-radius: 9999px;
+}
+.dark .GitHub{
+  color: white;
 }
 
 .Netlify {
@@ -88,4 +92,33 @@
 
 .Vercel {
   color: #f0f0f0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.nav-active {
+  background-color: #0D5EA6;
+  /* adjust to your theme */
+  color: #ffffff !important;
+}
+
+.dark .nav-active {
+  background-color: #0D5EA6;
 }
