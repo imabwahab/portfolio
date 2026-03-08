@@ -44,10 +44,10 @@ function App() {
         ) : (
           <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 pb-10 pt-24 sm:px-6 lg:px-8">
             <HeroSection />
-            <HeroProofSection />
             <Experience />
             <Skills />
             <Projects />
+            <HeroProofSection />
             <Contact />
           </main>
         )}
@@ -58,3 +58,5 @@ function App() {
 }
 
 export default App;
+
+
