@@ -1,5 +1,9 @@
 import { FiBriefcase, FiCalendar, FiExternalLink } from "react-icons/fi";
 import { experienceData } from "../data/experience.js";
+import {
+  getExperienceProjectPath,
+  handlePathNavigation,
+} from "../utils/routing.js";
 
 function Experience() {
   return (
@@ -59,9 +63,16 @@ function Experience() {
 
                 <div className="mt-5 space-y-4">
                   {item.projects.map((project) => (
-                    <div
+                    <a
                       key={project.name}
-                      className="rounded-[1.25rem] border border-stroke bg-panel px-4 py-4"
+                      href={getExperienceProjectPath(project.slug)}
+                      onClick={(event) =>
+                        handlePathNavigation(
+                          event,
+                          getExperienceProjectPath(project.slug),
+                        )
+                      }
+                      className="block rounded-[1.25rem] border border-stroke bg-panel px-4 py-4 transition hover:border-accent/20 hover:bg-panel-strong"
                     >
                       <div className="flex items-center gap-2">
                         <FiExternalLink className="text-accent-strong" />
@@ -72,7 +83,7 @@ function Experience() {
                       <p className="mt-3 text-sm leading-7 text-text-soft">
                         {project.description}
                       </p>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>

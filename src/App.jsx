@@ -4,21 +4,22 @@ import Navbar from "./components/Navbar.jsx";
 import HeroSection from "./components/HeroSection.jsx";
 import HeroProofSection from "./components/HeroProofSection.jsx";
 import Experience from "./components/Experience.jsx";
+import ExperienceDetailPage from "./components/ExperienceDetailPage.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import ProjectDetailPage from "./components/ProjectDetailPage.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
-import { getProjectFromPathname } from "./utils/routing.js";
+import { getDetailRoute } from "./utils/routing.js";
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState(() =>
-    getProjectFromPathname(window.location.pathname),
+  const [selectedDetail, setSelectedDetail] = useState(() =>
+    getDetailRoute(window.location.pathname),
   );
 
   useEffect(() => {
     const handleRouteChange = () => {
-      setSelectedProject(getProjectFromPathname(window.location.pathname));
+      setSelectedDetail(getDetailRoute(window.location.pathname));
       window.scrollTo({ top: 0, behavior: "auto" });
     };
 
@@ -30,9 +31,13 @@ function App() {
   return (
     <div className="min-h-screen bg-[#050914] text-slate-100">
       <div className="page-shell">
-        <Navbar isProjectDetail={Boolean(selectedProject)} />
-        {selectedProject ? (
-          <ProjectDetailPage project={selectedProject} />
+        <Navbar isProjectDetail={Boolean(selectedDetail)} />
+        {selectedDetail ? (
+          selectedDetail.type === "project" ? (
+            <ProjectDetailPage project={selectedDetail.data} />
+          ) : (
+            <ExperienceDetailPage project={selectedDetail.data} />
+          )
         ) : (
           <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 pb-10 pt-24 sm:px-6 lg:px-8">
             <HeroSection />
@@ -43,7 +48,7 @@ function App() {
             <Contact />
           </main>
         )}
-        <Footer isProjectDetail={Boolean(selectedProject)} />
+        <Footer isProjectDetail={Boolean(selectedDetail)} />
       </div>
     </div>
   );
