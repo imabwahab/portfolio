@@ -1,34 +1,61 @@
-import { projectData } from '../assets/data.js';
-import ProjectCard from './cards/ProjectCard.jsx';
+import { FiArrowUpRight } from "react-icons/fi";
+import { projectData } from "../data/projects.js";
 
-const Projects = () => {
+function Projects() {
   return (
-    <section id="Projects" className="py-16 px-8 md:px-16 xl:px-30 lg:px-24">
-      {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-txt dark:text-primary-txt-light">
-        Projects
-      </h2>
+    <section
+      id="projects"
+      className="section-card rounded-[2rem] px-6 py-8 sm:px-8 lg:px-12 lg:py-10"
+    >
+      <div className="flex max-w-3xl flex-col gap-4">
+        <span className="section-label">Projects</span>
+        <h2 className="serif-display text-4xl font-bold text-white sm:text-5xl">
+          Selected projects
+        </h2>
+        <p className="max-w-2xl text-base leading-8 text-text-soft">
+          The overview stays compact here. Each project opens into a dedicated
+          detail page with the full story, stack, highlights, and image gallery.
+        </p>
+      </div>
 
-      <p className="text-center text-gray-600 dark:text-gray-300 mt-2">
-        Here is the list of projects that I have worked on.
-      </p>
-
-      {/* Projects Grid */}
-      <div className="mt-14 grid gap-10 lg:gap-14 sm:grid-cols-2">
+      <div className="mt-10 grid gap-5">
         {projectData.map((project, index) => (
-          <ProjectCard
-            key={index}
-            pic={project.pic}
-            name={project.name}
-            preview={project.preview}
-            github={project.preview}
-            tech={project.tech}
-          />
+          <a
+            key={project.slug}
+            href={`#/projects/${project.slug}`}
+            className="group rounded-[1.75rem] border border-stroke bg-panel-strong p-6 transition hover:border-accent/20 hover:bg-panel"
+          >
+            <div className="grid gap-5 lg:grid-cols-[120px_1fr_auto] lg:items-center">
+              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-accent-warm">
+                Project 0{index + 1}
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-white">
+                  {project.name}
+                </h3>
+                <p className="mt-3 max-w-3xl text-sm leading-7 text-text-soft">
+                  {project.summary}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span key={item} className="chip">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="inline-flex items-center gap-2 rounded-full border border-stroke bg-panel-soft px-4 py-3 text-sm font-semibold text-white transition group-hover:border-accent/20 group-hover:text-accent-strong">
+                View details
+                <FiArrowUpRight />
+              </div>
+            </div>
+          </a>
         ))}
       </div>
     </section>
   );
-};
+}
 
 export default Projects;
-

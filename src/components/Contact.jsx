@@ -1,84 +1,165 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import {
+  FiArrowUpRight,
+  FiFacebook,
+  FiGithub,
+  FiInstagram,
+  FiLinkedin,
+  FiTwitter,
+} from "react-icons/fi";
+import { contactData } from "../data/contact.js";
 
-const Contact = () => {
-  const form = useRef();
+const socialIcons = {
+  GitHub: FiGithub,
+  LinkedIn: FiLinkedin,
+  X: FiTwitter,
+  Facebook: FiFacebook,
+  Instagram: FiInstagram,
+};
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+function Contact() {
+  const formRef = useRef(null);
+  const [status, setStatus] = useState("idle");
 
-    emailjs
-      .sendForm(
-        "service_se4w84f",
-        "template_r4elsgp",
-        form.current,
-        "sFmurYra7IrSz6epr"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          e.target.reset();
-          alert("Email Sent!");
-        },
-        (error) => {
-          console.log(error.text);
-        }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus("sending");
+
+    try {
+      await emailjs.sendForm(
+        contactData.form.serviceId,
+        contactData.form.templateId,
+        formRef.current,
+        contactData.form.publicKey,
       );
+
+      formRef.current?.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
-    <section id="contact" className="py-16 px-6 md:px-12 ">
-      <div className="max-w-4xl mx-auto">
-        {/* Title */}
-        <h1 className="text-3xl md:text-4xl font-bold text-center text-primary-txt dark:text-primary-txt-light mb-2">
-          Contact Me
-        </h1>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-10">
-          Please fill out the form below to discuss any work opportunities.
-        </p>
-
-        {/* Contact Form */}
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="mt-10 p-8 md:p-12 space-y-6"
-        >
-          <div className="flex flex-col md:flex-row gap-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              name="name"
-              required
-              className="flex-1 w-full p-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/10 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              name="eemail"
-              required
-              className="flex-1 w-full p-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/10 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-            />
+    <section
+      id="contact"
+      className="section-card rounded-[2rem] px-6 py-8 sm:px-8 lg:px-12 lg:py-10"
+    >
+      <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="flex flex-col gap-6">
+          <span className="section-label">Contact</span>
+          <div>
+            <h2 className="serif-display text-4xl font-bold text-white sm:text-5xl">
+              {contactData.heading}
+            </h2>
+            <p className="mt-4 max-w-xl text-base leading-8 text-text-soft">
+              {contactData.description}
+            </p>
           </div>
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows={6}
-            required
-            className="w-full p-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/10 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-          ></textarea>
+          <div className="rounded-[1.75rem] border border-stroke bg-panel-strong p-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent-warm">
+              Reach me through
+            </p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {contactData.socials.map((social) => {
+                const Icon = socialIcons[social.name];
 
-          <button
-            type="submit"
-            className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg transition-transform transform hover:-translate-y-1"
-          >
-            Send Message
-          </button>
-        </form>
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-between rounded-2xl border border-stroke bg-panel-soft px-4 py-4 transition hover:border-accent/30 hover:bg-panel"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 text-accent-strong">
+                        <Icon />
+                      </div>
+                      <div>
+                        <p className="font-medium text-white">{social.name}</p>
+                        <p className="text-sm text-text-soft">Open profile</p>
+                      </div>
+                    </div>
+                    <FiArrowUpRight className="text-text-soft" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-[1.75rem] border border-stroke bg-panel-strong p-6 sm:p-8">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
+            <div className="grid gap-5 sm:grid-cols-2">
+              <label className="block">
+                <span className="mb-2 block text-sm font-medium text-white">
+                  Name
+                </span>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Your name"
+                  className="w-full rounded-2xl border border-stroke bg-panel-soft px-4 py-3 text-white outline-none transition placeholder:text-text-soft focus:border-accent/40"
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-medium text-white">
+                  Email
+                </span>
+                <input
+                  type="email"
+                  name="eemail"
+                  required
+                  placeholder="Your email"
+                  className="w-full rounded-2xl border border-stroke bg-panel-soft px-4 py-3 text-white outline-none transition placeholder:text-text-soft focus:border-accent/40"
+                />
+              </label>
+            </div>
+
+            <label className="block">
+              <span className="mb-2 block text-sm font-medium text-white">
+                Message
+              </span>
+              <textarea
+                name="message"
+                rows="7"
+                required
+                placeholder="Tell me about the project, role, or problem you want solved."
+                className="w-full rounded-[1.5rem] border border-stroke bg-panel-soft px-4 py-3 text-white outline-none transition placeholder:text-text-soft focus:border-accent/40"
+              />
+            </label>
+
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-accent-strong disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {status === "sending" ? "Sending..." : "Send message"}
+              </button>
+
+              <p className="text-sm text-text-soft">
+                {status === "success"
+                  ? "Your message was sent successfully."
+                  : null}
+                {status === "error"
+                  ? "The form could not be sent. Please try again."
+                  : null}
+                {status === "idle"
+                  ? "Response-focused work across frontend, backend, and full-stack builds."
+                  : null}
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
-
   );
-};
+}
 
 export default Contact;

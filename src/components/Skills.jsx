@@ -1,78 +1,63 @@
-import { FaLaptopCode } from "react-icons/fa6";
-import { IoSettingsOutline } from "react-icons/io5";
-import { TbDatabaseShare } from "react-icons/tb";
-import { GoTools } from "react-icons/go";
-import { skills } from "../assets/data.js";
-import SkillCard from "./cards/SkillCard.jsx";
-
-
-const sectionGradient = "bg-gradient-to-r from-[#001d3d] via-[#335c67] to-[#0D5EA6]";
+import { skillGroups } from "../data/skills.js";
 
 function Skills() {
-  const { frontend, backend, database, devops } = skills;
-
-  const categories = [
-    {
-      title: "Frontend",
-      icon: FaLaptopCode,
-      data: frontend,
-    },
-    {
-      title: "Backend",
-      icon: IoSettingsOutline,
-      data: backend,
-    },
-    {
-      title: "Database",
-      icon: TbDatabaseShare,
-      data: database,
-    },
-    {
-      title: "DevOps",
-      icon: GoTools,
-      data: devops,
-    },
-  ];
-
   return (
-    <section id="skills" className="py-16 px-6 md:px-12 lg:px-24 text-white">
-      <h2 className="text-4xl font-bold text-primary-txt dark:text-primary-txt-light text-center mb-4">
-        Skills
-      </h2>
+    <section
+      id="expertise"
+      className="section-card rounded-[2rem] px-6 py-8 sm:px-8 lg:px-12 lg:py-10"
+    >
+      <div className="flex max-w-3xl flex-col gap-4">
+        <span className="section-label">Expertise</span>
+        <h2 className="serif-display text-4xl font-bold text-white sm:text-5xl">
+          A practical skill set built around full-stack delivery
+        </h2>
+        <p className="max-w-2xl text-base leading-8 text-text-soft">
+          My work is strongest where frontend quality, backend reliability, and
+          deployment discipline need to come together in one product.
+        </p>
+      </div>
 
-      <p className="text-center text-[#5C7285] dark:text-gray-300 max-w-3xl mx-auto mb-12">
-        My technical expertise spans frontend, backend, database, and DevOps,
-        enabling me to build complete and scalable applications.
-      </p>
-
-      <div className="space-y-14">
-        {categories.map(({ title, icon: Icon, data }, idx) => (
-          <>
-            <div
-              key={idx}
-              className="bg-white/40 dark:bg-dark-midnight/20 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden border border-white/10"
-            >
-              {/* Unified Section Header */}
-              <div
-                className={`${sectionGradient} py-6 flex items-center justify-center gap-4 text-primary-txt-light shadow-inner`}
-              >
-                <Icon className="text-3xl" />
-                <h3 className="text-3xl font-bold tracking-wide">{title}</h3>
+      <div className="mt-10 grid gap-6 xl:grid-cols-2">
+        {skillGroups.map((group) => (
+          <article
+            key={group.title}
+            className="rounded-[1.75rem] border border-stroke bg-panel-strong p-6"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h3 className="text-2xl font-semibold text-white">
+                  {group.title}
+                </h3>
+                <p className="mt-3 max-w-xl text-sm leading-7 text-text-soft">
+                  {group.subtitle}
+                </p>
               </div>
-
-              {/* Skill Cards */}
-              <div className="flex flex-wrap justify-center gap-6 px-8 py-10">
-                {data.map((skill, index) => (
-                  <SkillCard
-                    key={index}
-                    IconComponent={skill.icon}
-                    skillTitle={skill.skillTitle}
-                    skillPercentage={skill.skillPercentage}
-                  />
-                ))}
-              </div>
+              <div className="hidden h-12 w-12 rounded-2xl border border-accent/20 bg-accent/10 sm:flex" />
             </div>
-          </>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {group.skills.map((skill) => {
+                const Icon = skill.icon;
+
+                return (
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-4 rounded-2xl border border-stroke bg-panel-soft px-4 py-4"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 text-xl text-accent-strong">
+                      <Icon />
+                    </div>
+                    <div>
+                      <p className="font-medium text-white">{skill.name}</p>
+                      <p className="text-sm text-text-soft">
+                        Applied in shipped portfolio work
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </article>
         ))}
       </div>
     </section>

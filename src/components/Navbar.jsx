@@ -1,102 +1,141 @@
-import { useState } from 'react';
-import { FaUserAlt, FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
-import { GrDocumentDownload } from "react-icons/gr";
-import { Link } from 'react-scroll';
-import logo from '../assets/logo.png'
+import { useState } from "react";
+import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { navLinks } from "../data/navigation.js";
+import { profileData } from "../data/profile.js";
 
-function Navbar({ navLinks, darkMode, setDarkMode }) {
+function Navbar({ isProjectDetail = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
-  const toggleDarkMode = () => setDarkMode((prev) => !prev);
-
   return (
-    <nav className="text-primary-txt  dark:bg-dark-midnight bg-gray-100 dark:text-white shadow-md fixed top-0 h-[66px] w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between rounded-full border border-stroke bg-panel/90 px-4 py-3 shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur xl:px-6">
+        <a
+          href={isProjectDetail ? "#/" : "#home"}
+          className="cursor-pointer"
+          onClick={() => setMenuOpen(false)}
+        >
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-accent/25 bg-accent/10 text-sm font-bold tracking-[0.22em] text-accent-strong">
+              AW
+            </div>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">
+                Portfolio
+              </p>
+              <p className="text-sm text-white">{profileData.name}</p>
+            </div>
+          </div>
+        </a>
 
-        <img
-          src={logo}
-          alt="Logo"
-          className="h-10 w-auto object-contain select-none"
-        />
-
-        <div className="hidden md:flex gap-8 items-center">
-          {navLinks.map(({ name, to }) => (
-            <Link
-              key={name}
-              to={to}
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              activeClass="nav-active"
-              className="
-                relative px-4 py-2 rounded-lg
-                text-lg font-bold cursor-pointer
-                text-primary-txt dark:text-white/80
-                hover:text-white
-                transition-all duration-300 ease-in-out
-              "
+        <div className="hidden items-center gap-8 md:flex">
+          {isProjectDetail ? (
+            <a
+              href="#/"
+              className="relative cursor-pointer text-sm font-medium text-text-soft transition hover:text-white after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:scale-x-100"
             >
-              {name}
-            </Link>
-
-          ))}
+              Back to portfolio
+            </a>
+          ) : (
+            navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.to}
+                smooth
+                spy
+                offset={-90}
+                duration={500}
+                activeClass="nav-link-active"
+                className="relative cursor-pointer text-sm font-medium text-text-soft transition hover:text-white after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-300"
+              >
+                {link.name}
+              </Link>
+            ))
+          )}
         </div>
 
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4 text-xl">
-          <FaUserAlt className="cursor-pointer dark:hover:text-accent transition-colors duration-200" />
-          <GrDocumentDownload className="cursor-pointer dark:hover:text-accent transition-colors duration-200" />
-          <button onClick={toggleDarkMode} className="focus:outline-none">
-            {darkMode ? <FaSun className=" dark:hover:text-accent" /> : <FaMoon className=" hover:dark:hover:text-accent" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-2xl focus:outline-none">
-            {menuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden px-4 flex flex-col pt-4 pb-6 space-y-4 text-primary-txt dark:text-white/80  bg-gray-100 dark:bg-dark-midnight text-lg rounded-b-md shadow-lg">
-          {navLinks.map(({ name, to }) => (
-            <Link
-              key={name}
-              to={to}
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={500}
-              activeClass="nav-active"
-              className="
-                relative px-4 py-2 w-max rounded-full
-                text-lg font-bold cursor-pointer
-                text-primary-txt dark:text-white/80
-                hover:text-white
-                transition-all duration-300 ease-in-out
-              "
+        <div className="hidden items-center gap-3 md:flex">
+          {isProjectDetail ? (
+            <a
+              href="#/"
+              className="rounded-full border border-accent/25 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent-strong transition hover:bg-accent/15"
             >
-              {name}
+              Back to portfolio
+            </a>
+          ) : (
+            <Link
+              to="contact"
+              smooth
+              duration={500}
+              className="cursor-pointer rounded-full border border-accent/25 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent-strong transition hover:bg-accent/15"
+            >
+              Start a conversation
             </Link>
+          )}
+        </div>
 
-          ))}
+        <button
+          type="button"
+          onClick={() => setMenuOpen((current) => !current)}
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stroke bg-panel-soft text-lg text-white md:hidden"
+          aria-label="Toggle navigation"
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </nav>
 
-          <div className="flex items-center gap-4 pt-4 border-t border-gray-300 dark:border-gray-700">
-
-            <FaUserAlt className="cursor-pointer hover:text-accent" />
-            <GrDocumentDownload className="cursor-pointer hover:text-accent" />
-            <button onClick={toggleDarkMode} className="focus:outline-none text-xl">
-              {darkMode ? <FaSun className="hover:text-accent" /> : <FaMoon className="hover:text-accent" />}
-            </button>
+      {menuOpen ? (
+        <div className="mx-auto mt-3 w-full max-w-7xl rounded-3xl border border-stroke bg-panel/95 p-5 shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur md:hidden">
+          <div className="flex flex-col gap-4">
+            {isProjectDetail ? (
+              <>
+                <a
+                  href="#/"
+                  onClick={() => setMenuOpen(false)}
+                  className="cursor-pointer rounded-2xl border border-transparent px-4 py-3 text-sm font-medium text-text-soft transition hover:border-stroke hover:bg-panel-soft hover:text-white"
+                >
+                  Back to portfolio
+                </a>
+                <a
+                  href="#/"
+                  onClick={() => setMenuOpen(false)}
+                  className="cursor-pointer rounded-2xl border border-accent/20 bg-accent/10 px-4 py-3 text-center text-sm font-semibold text-accent-strong"
+                >
+                  Back to portfolio
+                </a>
+              </>
+            ) : (
+              <>
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.to}
+                    smooth
+                    spy
+                    offset={-80}
+                    duration={500}
+                    onClick={() => setMenuOpen(false)}
+                    activeClass="nav-link-active"
+                    className="cursor-pointer rounded-2xl border border-transparent px-4 py-3 text-sm font-medium text-text-soft transition hover:border-stroke hover:bg-panel-soft hover:text-white"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <Link
+                  to="contact"
+                  smooth
+                  duration={500}
+                  onClick={() => setMenuOpen(false)}
+                  className="cursor-pointer rounded-2xl border border-accent/20 bg-accent/10 px-4 py-3 text-center text-sm font-semibold text-accent-strong"
+                >
+                  Start a conversation
+                </Link>
+              </>
+            )}
           </div>
         </div>
-      )}
-    </nav>
+      ) : null}
+    </header>
   );
 }
 

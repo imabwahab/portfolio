@@ -1,124 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Stack+Sans+Text:wght@200..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap");
 
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 
-* {
-  font-family: "Alan Sans", sans-serif;
+:root {
+  color-scheme: dark;
+  --canvas: #050914;
+  --panel: rgba(8, 15, 28, 0.92);
+  --panel-strong: #0c1425;
+  --panel-soft: rgba(14, 26, 47, 0.92);
+  --stroke: rgba(158, 184, 217, 0.14);
+  --text-main: #edf3fb;
+  --text-soft: #a8bbd4;
+  --accent: #71d4c7;
+  --accent-strong: #92f2d7;
+  --accent-warm: #f0b37a;
 }
 
 @theme {
-
-  /* 🌑 Dark Colors */
-  --color-dark-primary: #0f2027;
-  /* Jet Black */
-  --color-dark-secondary: #023047;
-  /* Ocean Blue */
-  --color-dark-midnight: #003049;
-  /* Midnight Blue */
-  --color-dark-slate: #335c67;
-  /* Slate Teal */
-  --color-dark-navy: #001d3d;
-  /* Deep Navy */
-
-  --color-primary-txt: #0D5EA6;
-  --color-primary-txt-light: #FFF5E4;
-  --color-secondary-txt: #077A7D;
+  --color-canvas: var(--canvas);
+  --color-panel: var(--panel);
+  --color-panel-strong: var(--panel-strong);
+  --color-panel-soft: var(--panel-soft);
+  --color-stroke: var(--stroke);
+  --color-text-main: var(--text-main);
+  --color-text-soft: var(--text-soft);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-warm: var(--accent-warm);
 }
 
-.HTML {
-  color: #E44D26;
+html {
+  scroll-behavior: smooth;
+  background-color: var(--canvas);
 }
 
-.CSS {
-  color: #264DE4;
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: var(--canvas);
+  background:
+    radial-gradient(circle at top left, rgba(113, 212, 199, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(240, 179, 122, 0.08), transparent 20%),
+    linear-gradient(180deg, #050914 0%, #040913 42%, #02050d 100%);
+  color: var(--text-main);
+  font-family: "Space Grotesk", sans-serif;
 }
 
-.JavaScript {
-  color: #F0DB4F;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.React {
-  color: #61DBFB;
+* {
+  box-sizing: border-box;
 }
 
-.Bootstrap {
-  color: #7952B3;
+#root {
+  min-height: 100vh;
+  background-color: var(--canvas);
 }
 
-.TailwindCSS {
-  color: #38BDF8;
+.page-shell {
+  position: relative;
+  overflow: hidden;
 }
 
-.NodeJS {
-  color: #3C873A;
-}
-
-.ExpressJS {
-  color: #fdfdfd;
-}
-
-.MySQL {
-  color: #00758F;
-}
-
-.MongoDB {
-  color: #47A248;
-}
-
-.Git {
-  color: #F1502F;
-}
-
-.dark .Git{
-  color: white;
-}
-
-.GitHub {
-  color: #181717;
-  background-color: #eaeaea;
+.page-shell::before,
+.page-shell::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
   border-radius: 9999px;
-}
-.dark .GitHub{
-  color: white;
-}
-
-.Netlify {
-  color: #00C7B7;
+  pointer-events: none;
+  filter: blur(80px);
 }
 
-.Vercel {
-  color: #f0f0f0;
+.page-shell::before {
+  top: 6rem;
+  left: -6rem;
+  height: 18rem;
+  width: 18rem;
+  background: rgba(113, 212, 199, 0.14);
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.page-shell::after {
+  right: -4rem;
+  top: 28rem;
+  height: 16rem;
+  width: 16rem;
+  background: rgba(240, 179, 122, 0.12);
 }
 
-.float-animation {
-  animation: float 4s ease-in-out infinite;
-  will-change: transform;
+.serif-display {
+  font-family: "Source Serif 4", serif;
 }
 
-.nav-active {
-  background-color: #0D5EA6;
-  /* adjust to your theme */
-  color: #ffffff !important;
+.section-card {
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--stroke);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    var(--panel);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.26);
 }
 
-.dark .nav-active {
-  background-color: #0D5EA6;
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid rgba(146, 242, 215, 0.16);
+  background: rgba(113, 212, 199, 0.08);
+  padding: 0.45rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.section-label::before {
+  content: "";
+  height: 0.45rem;
+  width: 0.45rem;
+  border-radius: 9999px;
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(146, 242, 215, 0.85);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(168, 187, 212, 0.16);
+  background: rgba(10, 19, 35, 0.9);
+  color: var(--text-soft);
+  padding: 0.5rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+}
+
+.grid-outline {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.ambient-line {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(113, 212, 199, 0.08), transparent 34%),
+    linear-gradient(300deg, rgba(240, 179, 122, 0.08), transparent 28%);
+  pointer-events: none;
+}
+
+.project-image {
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.04);
+  opacity: 0.4;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay {
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+
+.nav-link-active {
+  color: var(--text-main) !important;
+}
+
+.nav-link-active::after {
+  transform: scaleX(1) !important;
 }
