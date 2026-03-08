@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa6";
 import { BiLogoMongodb, BiLogoNetlify } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
+import { FiCode, FiDatabase, FiServer, FiTool } from "react-icons/fi";
 import { IoLogoJavascript, IoLogoVercel } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import {
@@ -16,25 +17,29 @@ import {
   SiExpress,
   SiNestjs,
   SiPostgresql,
+  SiReact,
   SiSupabase,
 } from "react-icons/si";
 
 export const skillGroups = [
   {
     title: "Frontend",
-    subtitle: "Interfaces, component architecture, and modern styling workflows.",
+    categoryIcon: FiCode,
+    subtitle: "Web and mobile interfaces, component architecture, and scalable styling systems.",
     skills: [
       { icon: FaHtml5, name: "HTML" },
       { icon: FaCss3Alt, name: "CSS" },
       { icon: IoLogoJavascript, name: "JavaScript" },
       { icon: FaReact, name: "React" },
+      { icon: SiReact, name: "React Native" },
       { icon: FaBootstrap, name: "Bootstrap" },
       { icon: RiTailwindCssFill, name: "Tailwind CSS" },
     ],
   },
   {
     title: "Backend",
-    subtitle: "Server-side logic, API development, and request handling.",
+    categoryIcon: FiServer,
+    subtitle: "API development, application logic, and server-side architecture.",
     skills: [
       { icon: FaNode, name: "Node.js" },
       { icon: SiExpress, name: "Express.js" },
@@ -43,7 +48,8 @@ export const skillGroups = [
   },
   {
     title: "Database",
-    subtitle: "Application data storage and schema-driven development.",
+    categoryIcon: FiDatabase,
+    subtitle: "Data modeling, persistence, and schema-driven application design.",
     skills: [
       { icon: BsFiletypeSql, name: "MySQL" },
       { icon: BiLogoMongodb, name: "MongoDB" },
@@ -53,7 +59,8 @@ export const skillGroups = [
   },
   {
     title: "Tooling and Deployment",
-    subtitle: "Version control and deployment platforms used in delivery.",
+    categoryIcon: FiTool,
+    subtitle: "Version control, deployment tooling, and release-oriented workflows.",
     skills: [
       { icon: FaGitAlt, name: "Git" },
       { icon: FaGithub, name: "GitHub" },

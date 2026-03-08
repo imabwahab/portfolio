@@ -11,11 +11,12 @@ function Projects() {
       <div className="flex max-w-3xl flex-col gap-4">
         <span className="section-label">Projects</span>
         <h2 className="serif-display text-4xl font-bold text-white sm:text-5xl">
-          Selected projects
+          Selected work
         </h2>
         <p className="max-w-2xl text-base leading-8 text-text-soft">
-          The overview stays compact here. Each project opens into a dedicated
-          detail page with the full story, stack, highlights, and image gallery.
+          This section highlights a selection of projects that demonstrate how
+          I approach frontend execution, backend logic, integration work, and
+          overall product delivery.
         </p>
       </div>
 

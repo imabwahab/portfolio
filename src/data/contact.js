@@ -1,7 +1,7 @@
 export const contactData = {
-  heading: "Let's build something useful",
+  heading: "Let’s discuss your next product",
   description:
-    "If you need a frontend, a backend, or a complete MERN application, send a message. I am interested in projects where clean execution and reliability matter.",
+    "If you need a developer who can contribute across frontend, backend, or full-stack delivery, send a message. I am most interested in work where clarity, reliability, and execution quality matter.",
   form: {
     serviceId: "service_se4w84f",
     templateId: "template_r4elsgp",

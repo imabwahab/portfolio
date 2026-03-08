@@ -123,8 +123,8 @@ function ExperienceDetailPage({ project }) {
             </div>
             <p className="mt-5 text-lg font-semibold text-white">Professional product work</p>
             <p className="mt-3 text-sm leading-7 text-text-soft">
-              This detail page reflects product delivery inside a professional environment,
-              not a standalone demo build.
+              This work reflects delivery inside a professional product
+              environment rather than an isolated demo project.
             </p>
           </div>
 
@@ -134,8 +134,8 @@ function ExperienceDetailPage({ project }) {
             </div>
             <p className="mt-5 text-lg font-semibold text-white">Ongoing execution</p>
             <p className="mt-3 text-sm leading-7 text-text-soft">
-              The work emphasizes consistent implementation, practical collaboration,
-              and dependable shipping inside an active product cycle.
+              The engagement emphasizes consistent implementation, practical
+              collaboration, and dependable execution inside an active product cycle.
             </p>
           </div>
 
@@ -143,10 +143,10 @@ function ExperienceDetailPage({ project }) {
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 text-accent-strong">
               <FiArrowUpRight />
             </div>
-            <p className="mt-5 text-lg font-semibold text-white">Same detail-page flow</p>
+            <p className="mt-5 text-lg font-semibold text-white">Consistent presentation</p>
             <p className="mt-3 text-sm leading-7 text-text-soft">
-              Experience entries now follow the same dedicated-page pattern as your
-              portfolio projects, so the site feels consistent.
+              Experience entries follow the same structured presentation as the
+              portfolio projects, creating a more cohesive site experience.
             </p>
           </div>
         </div>

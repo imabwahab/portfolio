@@ -103,11 +103,11 @@ function ProjectDetailPage({ project }) {
         <div className="flex max-w-3xl flex-col gap-4">
           <span className="section-label">Gallery</span>
           <h2 className="serif-display text-3xl font-bold text-white sm:text-4xl">
-            Project visuals and supporting screens
+            Product screens and supporting visuals
           </h2>
           <p className="max-w-2xl text-base leading-8 text-text-soft">
-            This detail page is ready for multiple screenshots. Add more images
-            to each project gallery in the data file and they will appear here.
+            These screens provide a visual snapshot of the product experience,
+            interface decisions, and overall presentation of the project.
           </p>
         </div>
 

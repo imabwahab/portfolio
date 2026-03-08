@@ -13,18 +13,18 @@ export const projectData = [
     period: "Portfolio project",
     stack: ["Next.js", "Tailwind CSS", "OpenAI API", "Generative UI"],
     summary:
-      "An AI-powered experience focused on prompt-driven output generation with a clean frontend and third-party API integration.",
+      "A modern AI interface designed around prompt-driven workflows, structured output, and clean external API integration.",
     highlights: [
       "Built with a modern React framework for performance and routing.",
       "Integrated AI responses into a production-style frontend flow.",
       "Shipped with polished styling and deployment on Vercel.",
     ],
     detailIntro:
-      "This project was built to explore practical AI integration inside a modern product experience, with attention to prompt flow, frontend clarity, and deployable implementation.",
+      "This project explored how AI can be integrated into a polished product experience, with attention to prompt flow, frontend clarity, and a deployable implementation.",
     outcomes: [
-      "Created a clean user flow for prompt-based AI interactions.",
-      "Connected the interface to external AI services in a production-style setup.",
-      "Focused on responsive presentation and polished deployment quality.",
+      "Designed a structured user flow for prompt-based AI interactions.",
+      "Integrated external AI services into a production-style frontend experience.",
+      "Delivered a responsive interface with polished deployment quality.",
     ],
     gallery: [FormAI],
   },
@@ -38,20 +38,20 @@ export const projectData = [
     period: "Portfolio project",
     stack: ["React", "Node.js", "MongoDB", "JWT Auth"],
     summary:
-      "A full-stack blogging platform covering content management, authentication, and end-to-end MERN application structure.",
+      "A full-stack blogging platform covering content management, authentication, and an end-to-end MERN application workflow.",
     highlights: [
       "Connected frontend and backend layers in a single product workflow.",
       "Implemented JWT-based authentication for protected actions.",
       "Used MongoDB for content persistence and application state.",
     ],
     detailIntro:
-      "This build reflects a more complete application workflow, combining frontend interfaces, backend endpoints, authentication, and persistent data in one product.",
+      "This project represents a complete application workflow, combining frontend interfaces, backend endpoints, authentication, and persistent data in a single product.",
     outcomes: [
       "Implemented content-driven user flows with protected actions.",
-      "Built a backend-backed architecture instead of a frontend-only demo.",
-      "Used JWT authentication and database persistence for real application behavior.",
+      "Built a backend-supported architecture rather than a frontend-only demo.",
+      "Used JWT authentication and database persistence to reflect real application behavior.",
     ],
-    gallery: [BlogPlatform],
+    gallery: [BlogPlatform, BlogPlatform, BlogPlatform],
   },
   {
     slug: "chat-app",
@@ -63,18 +63,18 @@ export const projectData = [
     period: "Portfolio project",
     stack: ["React", "Firebase", "Real-time Messaging", "Authentication"],
     summary:
-      "A chat application built around instant communication, user authentication, and responsive client-side interaction.",
+      "A chat application focused on real-time messaging, authenticated access, and responsive client-side interaction.",
     highlights: [
       "Delivered a real-time messaging experience with Firebase.",
       "Handled login and user flows around authenticated access.",
       "Focused on speed, responsiveness, and practical product behavior.",
     ],
     detailIntro:
-      "This project focused on fast client interaction and real-time communication, with authenticated access and practical app behavior as the core priorities.",
+      "This project focused on real-time communication, authenticated access, and the kind of responsive interaction expected from a modern messaging product.",
     outcomes: [
-      "Built a live messaging experience with Firebase as the realtime backend.",
+      "Built a live messaging experience with Firebase as the real-time backend.",
       "Handled authentication and user flow around active conversations.",
-      "Designed the interface to feel responsive and immediate during use.",
+      "Designed the interface to feel fast, responsive, and immediate in use.",
     ],
     gallery: [ChatApp],
   },

@@ -2,19 +2,19 @@ import profile from "../assets/profile_pic3.png";
 
 export const profileData = {
   name: "Abdul Wahab",
-  title: "Full-Stack MERN Developer",
+  title: "Full-Stack Web Developer",
   location: "Pakistan",
-  kicker: "Available for freelance and full-time web development work.",
+  kicker: "Available for freelance engagements and full-time opportunities.",
   intro:
-    "I build production-focused web applications with React, Node.js, NestJS, MongoDB, PostgreSQL, and Supabase. My work focuses on shipping responsive interfaces, dependable APIs, authentication flows, and polished deployments.",
+    "I build modern web applications with React, Next.js, Node.js, and NestJS, focusing on clean interfaces, reliable APIs, and practical full-stack delivery.",
   roles: [
-    "MERN Stack Web Applications",
-    "Next.js Interfaces and Integrations",
-    "Node.js and NestJS Backend Logic",
+    "Production-Ready MERN Applications",
+    "Next.js Frontends and Integrations",
+    "Node.js and NestJS Backend Systems",
   ],
   profileImage: profile,
   availability:
-    "I am strongest on product-style builds where frontend quality, backend reliability, and deployment discipline all matter.",
+    "I do my best work on products that require thoughtful frontend execution, reliable backend architecture, and disciplined delivery from development through deployment.",
   primaryCta: {
     label: "View Projects",
     to: "projects",
@@ -24,9 +24,9 @@ export const profileData = {
     to: "contact",
   },
   stats: [
-    { value: "3+", label: "Shipped portfolio projects" },
+    { value: "3+", label: "Portfolio projects delivered" },
     { value: "4", label: "Core capability areas" },
-    { value: "MERN", label: "Primary engineering stack" },
+    { value: "MERN", label: "Primary application stack" },
   ],
   spotlight: [
     "Responsive frontend delivery",
@@ -48,18 +48,18 @@ export const profileData = {
 export const strengths = [
   {
     title: "Frontend Delivery",
-    text: "Responsive React and Next.js interfaces with Tailwind CSS, reusable components, and clean interaction patterns.",
+    text: "Responsive React and Next.js interfaces built with reusable components, clear interaction patterns, and an emphasis on usability.",
   },
   {
     title: "Backend Development",
-    text: "Node.js, Express, and NestJS services for authentication, CRUD workflows, API integration, and scalable business logic.",
+    text: "Node.js, Express, and NestJS services for authentication, API design, business logic, and full-stack feature delivery.",
   },
   {
     title: "Database Design",
-    text: "MongoDB, PostgreSQL, MySQL, and Supabase experience for application data modeling, persistence, and full-stack feature delivery.",
+    text: "Experience with MongoDB, PostgreSQL, MySQL, and Supabase for schema design, persistence, and application data workflows.",
   },
   {
     title: "Deployment Workflow",
-    text: "Git-based collaboration, Docker-based workflows, and deployment using GitHub, Vercel, and Netlify for fast iteration and release cycles.",
+    text: "Git-based collaboration, Docker workflows, and deployment through GitHub, Vercel, and Netlify to support stable releases and fast iteration.",
   },
 ];

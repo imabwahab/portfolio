@@ -6,12 +6,12 @@ function HeroProofSection() {
       <div className="flex max-w-3xl flex-col gap-4">
         <span className="section-label">Why Work With Me</span>
         <h2 className="serif-display text-4xl font-bold text-white sm:text-5xl">
-          The kind of partner you want before starting the conversation
+          Why teams choose to work with me
         </h2>
         <p className="max-w-2xl text-base leading-8 text-text-soft">
-          Before you reach out, this section gives you the practical signal:
-          how I deliver, how I communicate, and where I add the most value
-          across product and engineering work.
+          Beyond the technology stack, I bring a delivery mindset centered on
+          clarity, reliability, and practical execution across product and
+          engineering work.
         </p>
       </div>
 

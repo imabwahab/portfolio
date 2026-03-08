@@ -36,10 +36,9 @@ function HeroSection() {
           </div>
 
           <p className="max-w-2xl text-balance text-base leading-8 text-text-soft sm:text-lg">
-            <span className="font-semibold text-white">{profileData.name}</span> is
-            a {profileData.title.toLowerCase()} focused on modern frontend
-            interfaces, practical backend systems, and clean delivery.{" "}
-            {profileData.intro}
+            <span className="font-semibold text-white">{profileData.name}</span>{" "}
+            is a {profileData.title.toLowerCase()} focused on building modern,
+            reliable web products. {profileData.intro}
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -121,8 +120,8 @@ function HeroSection() {
               {profileData.name}
             </h2>
             <p className="mt-3 text-sm leading-7 text-text-soft">
-              Modern web applications, cleaner user experience, and dependable
-              backend execution.
+              Modern web applications with clean UI and dependable backend
+              execution.
             </p>
           </div>
         </div>
