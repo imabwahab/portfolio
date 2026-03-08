@@ -3,17 +3,25 @@ import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { navLinks } from "../data/navigation.js";
 import { profileData } from "../data/profile.js";
+import { getHomePath, handlePathNavigation } from "../utils/routing.js";
 
 function Navbar({ isProjectDetail = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const homePath = getHomePath();
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between rounded-full border border-stroke bg-panel/90 px-4 py-3 shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur xl:px-6">
         <a
-          href={isProjectDetail ? "#/" : "#home"}
+          href={isProjectDetail ? homePath : "#home"}
           className="cursor-pointer"
-          onClick={() => setMenuOpen(false)}
+          onClick={(event) => {
+            setMenuOpen(false);
+
+            if (isProjectDetail) {
+              handlePathNavigation(event, homePath);
+            }
+          }}
         >
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full border border-accent/25 bg-accent/10 text-sm font-bold tracking-[0.22em] text-accent-strong">
@@ -31,7 +39,8 @@ function Navbar({ isProjectDetail = false }) {
         <div className="hidden items-center gap-8 md:flex">
           {isProjectDetail ? (
             <a
-              href="#/"
+              href={homePath}
+              onClick={(event) => handlePathNavigation(event, homePath)}
               className="relative cursor-pointer text-sm font-medium text-text-soft transition hover:text-white after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:scale-x-100"
             >
               Back to portfolio
@@ -57,7 +66,8 @@ function Navbar({ isProjectDetail = false }) {
         <div className="hidden items-center gap-3 md:flex">
           {isProjectDetail ? (
             <a
-              href="#/"
+              href={homePath}
+              onClick={(event) => handlePathNavigation(event, homePath)}
               className="rounded-full border border-accent/25 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent-strong transition hover:bg-accent/15"
             >
               Back to portfolio
@@ -90,15 +100,23 @@ function Navbar({ isProjectDetail = false }) {
             {isProjectDetail ? (
               <>
                 <a
-                  href="#/"
-                  onClick={() => setMenuOpen(false)}
+                  href={homePath}
+                  onClick={(event) =>
+                    handlePathNavigation(event, homePath, () =>
+                      setMenuOpen(false),
+                    )
+                  }
                   className="cursor-pointer rounded-2xl border border-transparent px-4 py-3 text-sm font-medium text-text-soft transition hover:border-stroke hover:bg-panel-soft hover:text-white"
                 >
                   Back to portfolio
                 </a>
                 <a
-                  href="#/"
-                  onClick={() => setMenuOpen(false)}
+                  href={homePath}
+                  onClick={(event) =>
+                    handlePathNavigation(event, homePath, () =>
+                      setMenuOpen(false),
+                    )
+                  }
                   className="cursor-pointer rounded-2xl border border-accent/20 bg-accent/10 px-4 py-3 text-center text-sm font-semibold text-accent-strong"
                 >
                   Back to portfolio

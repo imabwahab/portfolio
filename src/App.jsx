@@ -9,30 +9,22 @@ import Projects from "./components/Projects.jsx";
 import ProjectDetailPage from "./components/ProjectDetailPage.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
-import { projectData } from "./data/projects.js";
-
-function getProjectFromHash() {
-  const match = window.location.hash.match(/^#\/projects\/([^/]+)$/);
-
-  if (!match) {
-    return null;
-  }
-
-  return projectData.find((project) => project.slug === match[1]) ?? null;
-}
+import { getProjectFromPathname } from "./utils/routing.js";
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState(() => getProjectFromHash());
+  const [selectedProject, setSelectedProject] = useState(() =>
+    getProjectFromPathname(window.location.pathname),
+  );
 
   useEffect(() => {
-    const handleHashChange = () => {
-      setSelectedProject(getProjectFromHash());
+    const handleRouteChange = () => {
+      setSelectedProject(getProjectFromPathname(window.location.pathname));
       window.scrollTo({ top: 0, behavior: "auto" });
     };
 
-    window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("popstate", handleRouteChange);
 
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("popstate", handleRouteChange);
   }, []);
 
   return (
@@ -58,5 +50,3 @@ function App() {
 }
 
 export default App;
-
-

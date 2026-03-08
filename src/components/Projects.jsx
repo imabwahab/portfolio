@@ -1,5 +1,6 @@
 import { FiArrowUpRight } from "react-icons/fi";
 import { projectData } from "../data/projects.js";
+import { getProjectPath, handlePathNavigation } from "../utils/routing.js";
 
 function Projects() {
   return (
@@ -22,7 +23,10 @@ function Projects() {
         {projectData.map((project, index) => (
           <a
             key={project.slug}
-            href={`#/projects/${project.slug}`}
+            href={getProjectPath(project.slug)}
+            onClick={(event) =>
+              handlePathNavigation(event, getProjectPath(project.slug))
+            }
             className="group rounded-[1.75rem] border border-stroke bg-panel-strong p-6 transition hover:border-accent/20 hover:bg-panel"
           >
             <div className="grid gap-5 lg:grid-cols-[120px_1fr_auto] lg:items-center">
