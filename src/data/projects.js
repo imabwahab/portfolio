@@ -4,12 +4,47 @@ import ChatApp from "../assets/ChatApp.png";
 
 export const projectData = [
   {
-    slug: "generative-ai",
+    name: "mapmymoney.co.nz",
+    source: "Algotix AI",
+    kind: "client",
+    image: null,
+    website: "https://mapmymoney.co.nz",
+    role: "Full-stack product delivery",
+    period: "2025 – Present",
+    stack: ["Frontend Delivery", "Backend Support", "Production"],
+    summary:
+      "Contributed to feature delivery and implementation quality for a live, customer-facing platform inside an active production environment.",
+    highlights: [
+      "Shipped practical product improvements in a live production environment.",
+      "Worked across the delivery cycle from implementation to release-ready updates.",
+      "Contributed across frontend and backend implementation tasks.",
+    ],
+  },
+  {
+    name: "getflair.io",
+    source: "Algotix AI",
+    kind: "client",
+    image: null,
+    website: "https://getflair.io",
+    role: "Client-facing full-stack implementation",
+    period: "2025 – Present",
+    stack: ["Feature Implementation", "Product Engineering", "Client-facing"],
+    summary:
+      "Contributed to full-stack implementation across an active client-facing product with real usage expectations.",
+    highlights: [
+      "Supported full-stack implementation across a live product.",
+      "Delivered work tied directly to client-facing functionality.",
+      "Operated in a professional delivery workflow shaped by real constraints.",
+    ],
+  },
+  {
     name: "Generative AI",
+    source: "Personal",
+    kind: "personal",
     image: FormAI,
     preview: "https://generative-ai-gray.vercel.app/",
     github: "https://github.com/imabwahab/Generative-AI.git",
-    role: "Frontend and integration-focused build",
+    role: "Frontend and integration build",
     period: "Portfolio project",
     stack: ["Next.js", "Tailwind CSS", "OpenAI API", "Generative UI"],
     summary:
@@ -19,18 +54,11 @@ export const projectData = [
       "Integrated AI responses into a production-style frontend flow.",
       "Shipped with polished styling and deployment on Vercel.",
     ],
-    detailIntro:
-      "This project explored how AI can be integrated into a polished product experience, with attention to prompt flow, frontend clarity, and a deployable implementation.",
-    outcomes: [
-      "Designed a structured user flow for prompt-based AI interactions.",
-      "Integrated external AI services into a production-style frontend experience.",
-      "Delivered a responsive interface with polished deployment quality.",
-    ],
-    gallery: [FormAI],
   },
   {
-    slug: "blog-platform",
     name: "Blog Platform",
+    source: "Personal",
+    kind: "personal",
     image: BlogPlatform,
     preview: "https://blog-source-pink.vercel.app/",
     github: "https://github.com/imabwahab/blog-source.git",
@@ -44,18 +72,11 @@ export const projectData = [
       "Implemented JWT-based authentication for protected actions.",
       "Used MongoDB for content persistence and application state.",
     ],
-    detailIntro:
-      "This project represents a complete application workflow, combining frontend interfaces, backend endpoints, authentication, and persistent data in a single product.",
-    outcomes: [
-      "Implemented content-driven user flows with protected actions.",
-      "Built a backend-supported architecture rather than a frontend-only demo.",
-      "Used JWT authentication and database persistence to reflect real application behavior.",
-    ],
-    gallery: [BlogPlatform, BlogPlatform, BlogPlatform],
   },
   {
-    slug: "chat-app",
     name: "Chat App",
+    source: "Personal",
+    kind: "personal",
     image: ChatApp,
     preview: "https://quick-chat-teal-eight.vercel.app/",
     github: "https://github.com/imabwahab/Quick-Chat.git",
@@ -69,13 +90,5 @@ export const projectData = [
       "Handled login and user flows around authenticated access.",
       "Focused on speed, responsiveness, and practical product behavior.",
     ],
-    detailIntro:
-      "This project focused on real-time communication, authenticated access, and the kind of responsive interaction expected from a modern messaging product.",
-    outcomes: [
-      "Built a live messaging experience with Firebase as the real-time backend.",
-      "Handled authentication and user flow around active conversations.",
-      "Designed the interface to feel fast, responsive, and immediate in use.",
-    ],
-    gallery: [ChatApp],
   },
 ];
