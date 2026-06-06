@@ -2,49 +2,37 @@ import { profileData, strengths } from "../data/profile.js";
 
 function HeroProofSection() {
   return (
-    <section className="section-card rounded-[2rem] px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
-      <div className="flex max-w-3xl flex-col gap-4">
-        <span className="section-label">Why Work With Me</span>
-        <h2 className="serif-display text-4xl font-bold text-white sm:text-5xl">
+    <section className="section-card border-t border-stroke-strong pt-20 lg:pt-24">
+      <div className="flex max-w-2xl flex-col gap-3">
+        <span className="section-label">Why work with me</span>
+        <h2 className="serif-display text-3xl font-semibold text-text-main sm:text-4xl">
           Why teams choose to work with me
         </h2>
-        <p className="max-w-2xl text-base leading-8 text-text-soft">
+        <p className="text-base leading-7 text-text-soft">
           Beyond the technology stack, I bring a delivery mindset centered on
           clarity, reliability, and practical execution across product and
           engineering work.
         </p>
       </div>
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="rounded-[1.75rem] border border-stroke bg-panel-strong p-5 sm:p-6">
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+      <div className="mt-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="flex flex-col gap-6">
+          <div className="grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-stroke bg-stroke lg:grid-cols-1">
             {profileData.stats.map((item) => (
-              <div
-                key={item.label}
-                className="rounded-[1.25rem] border border-stroke bg-panel-soft px-4 py-4"
-              >
-                <p className="text-2xl font-bold text-white">{item.value}</p>
-                <p className="mt-2 text-sm leading-6 text-text-soft">
+              <div key={item.label} className="bg-panel px-5 py-5">
+                <p className="text-2xl font-semibold text-text-main">
+                  {item.value}
+                </p>
+                <p className="mt-1 text-sm leading-6 text-text-soft">
                   {item.label}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-6 rounded-[1.5rem] border border-stroke bg-panel-soft p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent-warm">
-              Working style
-            </p>
-            <p className="mt-3 text-sm leading-7 text-text-soft">
-              {profileData.availability}
-            </p>
-          </div>
-
-          <div className="mt-6 rounded-[1.5rem] border border-stroke bg-panel-soft p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent-warm">
-              Core stack
-            </p>
-            <div className="mt-3 flex flex-wrap gap-2">
+          <div className="surface p-5">
+            <p className="section-label">Core stack</p>
+            <div className="mt-4 flex flex-wrap gap-2">
               {profileData.stacks.map((item) => (
                 <span key={item} className="chip">
                   {item}
@@ -56,12 +44,9 @@ function HeroProofSection() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           {strengths.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-[1.5rem] border border-stroke bg-panel-soft p-5"
-            >
-              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-text-soft">
+            <article key={item.title} className="surface p-5">
+              <h3 className="font-semibold text-text-main">{item.title}</h3>
+              <p className="mt-2 text-sm leading-7 text-text-soft">
                 {item.text}
               </p>
             </article>

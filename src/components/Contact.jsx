@@ -44,58 +44,50 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="section-card rounded-[2rem] px-6 py-8 sm:px-8 lg:px-12 lg:py-10"
+      className="section-card border-t border-stroke-strong pt-20 lg:pt-24"
     >
-      <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="flex flex-col gap-6">
           <span className="section-label">Contact</span>
           <div>
-            <h2 className="serif-display text-4xl font-bold text-white sm:text-5xl">
+            <h2 className="serif-display text-3xl font-semibold text-text-main sm:text-4xl">
               {contactData.heading}
             </h2>
-            <p className="mt-4 max-w-xl text-base leading-8 text-text-soft">
+            <p className="mt-4 max-w-xl text-base leading-7 text-text-soft">
               {contactData.description}
             </p>
           </div>
 
-          <div className="rounded-[1.75rem] border border-stroke bg-panel-strong p-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent-warm">
-              Connect with me
-            </p>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {contactData.socials.map((social) => {
-                const Icon = socialIcons[social.name];
+          <div className="grid gap-2 sm:grid-cols-2">
+            {contactData.socials.map((social) => {
+              const Icon = socialIcons[social.name];
 
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-between rounded-2xl border border-stroke bg-panel-soft px-4 py-4 transition hover:border-accent/30 hover:bg-panel"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 text-accent-strong">
-                        <Icon />
-                      </div>
-                      <div>
-                        <p className="font-medium text-white">{social.name}</p>
-                        <p className="text-sm text-text-soft">View profile</p>
-                      </div>
-                    </div>
-                    <FiArrowUpRight className="text-text-soft" />
-                  </a>
-                );
-              })}
-            </div>
+              return (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="surface surface-hover flex items-center justify-between px-4 py-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <Icon className="text-base text-text-faint" />
+                    <span className="text-sm font-medium text-text-main">
+                      {social.name}
+                    </span>
+                  </div>
+                  <FiArrowUpRight className="text-text-faint" />
+                </a>
+              );
+            })}
           </div>
         </div>
 
-        <div className="rounded-[1.75rem] border border-stroke bg-panel-strong p-6 sm:p-8">
+        <div className="surface p-6 sm:p-8">
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="block">
-                <span className="mb-2 block text-sm font-medium text-white">
+                <span className="mb-2 block text-sm font-medium text-text-main">
                   Name
                 </span>
                 <input
@@ -103,12 +95,12 @@ function Contact() {
                   name="name"
                   required
                   placeholder="Your name"
-                  className="w-full rounded-2xl border border-stroke bg-panel-soft px-4 py-3 text-white outline-none transition placeholder:text-text-soft focus:border-accent/40"
+                  className="w-full rounded-lg border border-stroke bg-panel-soft px-4 py-3 text-sm text-text-main outline-none transition placeholder:text-text-faint focus:border-accent/60"
                 />
               </label>
 
               <label className="block">
-                <span className="mb-2 block text-sm font-medium text-white">
+                <span className="mb-2 block text-sm font-medium text-text-main">
                   Email
                 </span>
                 <input
@@ -116,13 +108,13 @@ function Contact() {
                   name="eemail"
                   required
                   placeholder="Your email"
-                  className="w-full rounded-2xl border border-stroke bg-panel-soft px-4 py-3 text-white outline-none transition placeholder:text-text-soft focus:border-accent/40"
+                  className="w-full rounded-lg border border-stroke bg-panel-soft px-4 py-3 text-sm text-text-main outline-none transition placeholder:text-text-faint focus:border-accent/60"
                 />
               </label>
             </div>
 
             <label className="block">
-              <span className="mb-2 block text-sm font-medium text-white">
+              <span className="mb-2 block text-sm font-medium text-text-main">
                 Message
               </span>
               <textarea
@@ -130,7 +122,7 @@ function Contact() {
                 rows="7"
                 required
                 placeholder="Tell me about the product, role, or problem you need help solving."
-                className="w-full rounded-[1.5rem] border border-stroke bg-panel-soft px-4 py-3 text-white outline-none transition placeholder:text-text-soft focus:border-accent/40"
+                className="w-full rounded-lg border border-stroke bg-panel-soft px-4 py-3 text-sm text-text-main outline-none transition placeholder:text-text-faint focus:border-accent/60"
               />
             </label>
 
@@ -138,7 +130,7 @@ function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="inline-flex w-max items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-accent-strong disabled:cursor-not-allowed disabled:opacity-70"
+                className="btn-primary w-max disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {status === "sending" ? "Sending..." : "Send message"}
               </button>
