@@ -4,6 +4,7 @@ export const profileData = {
   name: "Abdul Wahab",
   title: "Full-Stack Web Developer",
   location: "Pakistan",
+  status: "Available for work",
   kicker: "Available for freelance engagements and full-time opportunities.",
   intro:
     "I build modern web applications with React, Next.js, Node.js, and NestJS, focusing on clean interfaces, reliable APIs, and practical full-stack delivery.",
