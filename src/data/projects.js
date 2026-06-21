@@ -3,20 +3,30 @@ import Sams from "../assets/sams.png";
 
 export const projectData = [
   {
-    name: "mapmymoney.co.nz",
+    name: "MapMyMoney",
     source: "Algotix AI",
     kind: "client",
     image: null,
     website: "https://mapmymoney.co.nz",
-    role: "Full-stack product delivery",
-    period: "2025 – Present",
-    stack: ["Frontend Delivery", "Backend Support", "Production"],
+    role: "Full-stack engineering",
+    period: "2025 – 2026",
+    stack: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Supabase / Postgres",
+      "Vercel Serverless",
+      "Clerk",
+      "Akahu Open Banking",
+      "TanStack Query",
+    ],
     summary:
-      "Contributed to feature delivery and implementation quality for a live, customer-facing platform inside an active production environment.",
+      "A New Zealand fintech platform that connects to users' bank accounts to track property equity and net wealth, and guides them through goal-based financial planning - paired with an advisor dashboard for processing applications.",
     highlights: [
-      "Shipped practical product improvements in a live production environment.",
-      "Worked across the delivery cycle from implementation to release-ready updates.",
-      "Contributed across frontend and backend implementation tasks.",
+      "Built two full Akahu open-banking OAuth flows on a serverless proxy architecture that keeps bank credentials off the client, with CSRF protection, token refresh, and account syncing.",
+      "Delivered a real-time equity dashboard with custom LTV/LVR visualizations and NZ-specific lending-policy and max-lending calculations.",
+      "Developed goal-based financial planning modules (First Home, Invest, KiwiSaver, Retire) including a priority-goals engine and an onboarding discovery flow.",
+      "Created an advisor dashboard and automated data-export pipelines spanning Google Sheets, CSV, HTML reporting, and Slack notifications.",
     ],
   },
   {
@@ -76,24 +86,6 @@ export const projectData = [
     ],
   },
   {
-    name: "Blog Platform",
-    source: "Personal",
-    kind: "personal",
-    image: BlogPlatform,
-    preview: "https://blog-source-pink.vercel.app/",
-    github: "https://github.com/imabwahab/blog-source.git",
-    role: "Full-stack MERN application",
-    period: "Portfolio project",
-    stack: ["React", "Node.js", "MongoDB", "JWT Auth"],
-    summary:
-      "A full-stack blogging platform covering content management, authentication, and an end-to-end MERN application workflow.",
-    highlights: [
-      "Connected frontend and backend layers in a single product workflow.",
-      "Implemented JWT-based authentication for protected actions.",
-      "Used MongoDB for content persistence and application state.",
-    ],
-  },
-  {
     name: "SAMS · Smart Appointment Management System",
     source: "Personal",
     kind: "personal",
@@ -119,6 +111,24 @@ export const projectData = [
       "Designed smart scheduling with weekly availability, automatic conflict prevention, and a tracked appointment lifecycle.",
       "Shipped a type-safe REST API with Express, Prisma, and Zod validation, documented end to end with Swagger/OpenAPI.",
       "Applied production patterns including JWT auth, bcrypt hashing, soft deletes, request logging, and consistent error handling.",
+    ],
+  },
+  {
+    name: "Blog Platform",
+    source: "Personal",
+    kind: "personal",
+    image: BlogPlatform,
+    preview: "https://blog-source-pink.vercel.app/",
+    github: "https://github.com/imabwahab/blog-source.git",
+    role: "Full-stack MERN application",
+    period: "Portfolio project",
+    stack: ["React", "Node.js", "MongoDB", "JWT Auth"],
+    summary:
+      "A full-stack blogging platform covering content management, authentication, and an end-to-end MERN application workflow.",
+    highlights: [
+      "Connected frontend and backend layers in a single product workflow.",
+      "Implemented JWT-based authentication for protected actions.",
+      "Used MongoDB for content persistence and application state.",
     ],
   },
 ];
