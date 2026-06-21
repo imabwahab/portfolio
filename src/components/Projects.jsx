@@ -25,11 +25,11 @@ function SourceBadge({ source, kind }) {
 function ProjectVisual({ project }) {
   if (project.image) {
     return (
-      <div className="overflow-hidden rounded-xl border border-stroke">
+      <div className="overflow-hidden rounded-xl border border-stroke bg-panel-soft">
         <img
           src={project.image}
           alt={project.name}
-          className="aspect-[16/10] w-full object-cover object-top"
+          className="aspect-[16/10] w-full object-contain object-center"
         />
       </div>
     );

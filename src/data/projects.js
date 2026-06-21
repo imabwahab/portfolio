@@ -1,6 +1,5 @@
-import FormAI from "../assets/FormAI.png";
 import BlogPlatform from "../assets/BlogPlatform.png";
-import ChatApp from "../assets/ChatApp.png";
+import Sams from "../assets/sams.png";
 
 export const projectData = [
   {
@@ -38,24 +37,6 @@ export const projectData = [
     ],
   },
   {
-    name: "Generative AI",
-    source: "Personal",
-    kind: "personal",
-    image: FormAI,
-    preview: "https://generative-ai-gray.vercel.app/",
-    github: "https://github.com/imabwahab/Generative-AI.git",
-    role: "Frontend and integration build",
-    period: "Portfolio project",
-    stack: ["Next.js", "Tailwind CSS", "OpenAI API", "Generative UI"],
-    summary:
-      "A modern AI interface designed around prompt-driven workflows, structured output, and clean external API integration.",
-    highlights: [
-      "Built with a modern React framework for performance and routing.",
-      "Integrated AI responses into a production-style frontend flow.",
-      "Shipped with polished styling and deployment on Vercel.",
-    ],
-  },
-  {
     name: "Blog Platform",
     source: "Personal",
     kind: "personal",
@@ -74,21 +55,31 @@ export const projectData = [
     ],
   },
   {
-    name: "Chat App",
+    name: "SAMS — Smart Appointment Management System",
     source: "Personal",
     kind: "personal",
-    image: ChatApp,
-    preview: "https://quick-chat-teal-eight.vercel.app/",
-    github: "https://github.com/imabwahab/Quick-Chat.git",
-    role: "Realtime frontend application",
+    image: Sams,
+    preview: "https://sams-web-azure.vercel.app/",
+    github: "https://github.com/imabwahab/sams-web",
+    role: "Full-stack healthcare management platform",
     period: "Portfolio project",
-    stack: ["React", "Firebase", "Real-time Messaging", "Authentication"],
+    stack: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Express",
+      "Prisma",
+      "MySQL",
+      "TanStack Query",
+      "Tailwind CSS",
+    ],
     summary:
-      "A chat application focused on real-time messaging, authenticated access, and responsive client-side interaction.",
+      "A production-ready, role-based platform that digitizes the doctor–patient appointment workflow for clinics, serving patients, doctors, and admins through one unified system.",
     highlights: [
-      "Delivered a real-time messaging experience with Firebase.",
-      "Handled login and user flows around authenticated access.",
-      "Focused on speed, responsiveness, and practical product behavior.",
+      "Built role-based dashboards for patients, doctors, and admins, with doctor discovery, search, and specialization filtering.",
+      "Designed smart scheduling with weekly availability, automatic conflict prevention, and a tracked appointment lifecycle.",
+      "Shipped a type-safe REST API with Express, Prisma, and Zod validation, documented end to end with Swagger/OpenAPI.",
+      "Applied production patterns including JWT auth, bcrypt hashing, soft deletes, request logging, and consistent error handling.",
     ],
   },
 ];
