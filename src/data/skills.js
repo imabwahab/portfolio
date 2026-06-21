@@ -1,5 +1,4 @@
 import {
-  FaBootstrap,
   FaCss3Alt,
   FaGitAlt,
   FaGithub,
@@ -9,16 +8,23 @@ import {
 } from "react-icons/fa6";
 import { BiLogoMongodb, BiLogoNetlify } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
-import { FiCode, FiDatabase, FiServer, FiTool } from "react-icons/fi";
+import { FiCloud, FiCode, FiDatabase, FiServer, FiTool } from "react-icons/fi";
 import { IoLogoJavascript, IoLogoVercel } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import {
   SiDocker,
   SiExpress,
+  SiGooglecloud,
   SiNestjs,
+  SiNextdotjs,
+  SiOpenai,
   SiPostgresql,
   SiReact,
+  SiReactquery,
+  SiStripe,
   SiSupabase,
+  SiTwilio,
+  SiTypescript,
 } from "react-icons/si";
 
 export const skillGroups = [
@@ -30,9 +36,11 @@ export const skillGroups = [
       { icon: FaHtml5, name: "HTML" },
       { icon: FaCss3Alt, name: "CSS" },
       { icon: IoLogoJavascript, name: "JavaScript" },
+      { icon: SiTypescript, name: "TypeScript" },
       { icon: FaReact, name: "React" },
+      { icon: SiNextdotjs, name: "Next.js" },
       { icon: SiReact, name: "React Native" },
-      { icon: FaBootstrap, name: "Bootstrap" },
+      { icon: SiReactquery, name: "TanStack Query" },
       { icon: RiTailwindCssFill, name: "Tailwind CSS" },
     ],
   },
@@ -55,6 +63,17 @@ export const skillGroups = [
       { icon: BiLogoMongodb, name: "MongoDB" },
       { icon: SiPostgresql, name: "PostgreSQL" },
       { icon: SiSupabase, name: "Supabase" },
+    ],
+  },
+  {
+    title: "Integrations and Cloud",
+    categoryIcon: FiCloud,
+    subtitle: "Third-party platform integrations and cloud deployment targets.",
+    skills: [
+      { icon: SiStripe, name: "Stripe" },
+      { icon: SiTwilio, name: "Twilio" },
+      { icon: SiOpenai, name: "OpenAI" },
+      { icon: SiGooglecloud, name: "Google Cloud" },
     ],
   },
   {

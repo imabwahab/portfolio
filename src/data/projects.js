@@ -21,7 +21,7 @@ export const projectData = [
       "TanStack Query",
     ],
     summary:
-      "A New Zealand fintech platform that connects to users' bank accounts to track property equity and net wealth, and guides them through goal-based financial planning - paired with an advisor dashboard for processing applications.",
+      "A New Zealand fintech platform that connects to users' bank accounts to track property equity and net wealth, and guides them through goal-based financial planning. It also includes an advisor dashboard for processing applications.",
     highlights: [
       "Built two full Akahu open-banking OAuth flows on a serverless proxy architecture that keeps bank credentials off the client, with CSRF protection, token refresh, and account syncing.",
       "Delivered a real-time equity dashboard with custom LTV/LVR visualizations and NZ-specific lending-policy and max-lending calculations.",
@@ -53,7 +53,7 @@ export const projectData = [
       "Served as lead contributor across Secret Shopper scoring, multi-tenant security, and infrastructure, delivering the highest individual contribution volume on the team over the quarter.",
       "Designed and shipped the end-to-end manual and VA scoring pipeline, including a source-aware scorecard engine, a concurrency-safe task system, and a privacy-conscious labeled-dataset export.",
       "Strengthened multi-tenant security by resolving cross-tenant access vulnerabilities across the Calls, Secret Shopper, and Emails services with shared, fail-closed authorization guards.",
-      "Resolved high-impact production issues — including race conditions, null-handling failures, and AI voiceprint misattribution — each accompanied by regression tests to prevent recurrence.",
+      "Resolved high-impact production issues such as race conditions, null-handling failures, and AI voiceprint misattribution, each accompanied by regression tests to prevent recurrence.",
       "Owned core integrations spanning Twilio telephony, OpenAI GPT-4o call analysis, a deployment-driven front-end routing split, and a full EliseAI and Snowflake recording-and-analytics pipeline.",
     ],
   },
@@ -76,7 +76,7 @@ export const projectData = [
       "Google Cloud Run",
     ],
     summary:
-      "A full-stack revenue operations platform layering enterprise accounts-receivable workflows, collections, and revenue analytics on top of Stripe - built for B2B debt recovery at scale.",
+      "A full-stack revenue operations platform that layers enterprise accounts-receivable workflows, collections, and revenue analytics on top of Stripe, built for B2B debt recovery at scale.",
     highlights: [
       "Modeled real corporate billing structures through account-hierarchy management (parent HQ → child properties → independents) with automatic parent/child financial rollups.",
       "Delivered AR aging reports across six time buckets with point-in-time historical reporting, Excel export, and flexible parent/child/invoice grouping.",

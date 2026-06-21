@@ -4,14 +4,14 @@ function HeroProofSection() {
   return (
     <section className="section-card border-t border-stroke-strong pt-20 lg:pt-24">
       <div className="flex max-w-2xl flex-col gap-3">
-        <span className="section-label">Why work with me</span>
+        <span className="section-label">How I work</span>
         <h2 className="serif-display text-3xl font-semibold text-text-main sm:text-4xl">
-          Why teams choose to work with me
+          How I approach the work
         </h2>
         <p className="text-base leading-7 text-text-soft">
-          Beyond the technology stack, I bring a delivery mindset centered on
-          clarity, reliability, and practical execution across product and
-          engineering work.
+          Beyond the technology stack, I focus on clear communication, reliable
+          delivery, and maintainable code across both product and engineering
+          work.
         </p>
       </div>
 

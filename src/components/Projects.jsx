@@ -59,7 +59,7 @@ function Projects() {
           Selected work
         </h2>
         <p className="text-base leading-7 text-text-soft">
-          A single view of the work I have shipped — from client products built
+          A single view of the work I have shipped, from client products built
           in a professional team to personal projects that show how I approach
           frontend, backend, and full-stack delivery end to end.
         </p>

@@ -86,23 +86,31 @@ a {
   z-index: 1;
 }
 
-/* Small uppercase label with a short accent rule — no glow, no pill. */
+/* Uppercase label in a bright neutral pill with an accent dot.
+   Distinct from the muted project chips and the green client badges. */
 .section-label {
   display: inline-flex;
+  width: max-content;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
+  border: 1px solid var(--stroke-strong);
+  border-radius: 9999px;
+  background: var(--panel-strong);
+  padding: 0.35rem 0.8rem;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--text-soft);
+  color: var(--text-main);
 }
 
 .section-label::before {
   content: "";
-  height: 1px;
-  width: 1.75rem;
-  background: var(--accent);
+  height: 0.4rem;
+  width: 0.4rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background: var(--accent-strong);
 }
 
 .text-balance {

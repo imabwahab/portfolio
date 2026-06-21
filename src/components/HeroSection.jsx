@@ -35,9 +35,11 @@ function HeroSection() {
         </div>
 
         <p className="max-w-xl text-balance text-base leading-7 text-text-soft">
-          <span className="font-medium text-text-main">{profileData.name}</span>{" "}
-          is a {profileData.title.toLowerCase()} focused on building modern,
-          reliable web products. {profileData.intro}
+          <span className="font-medium text-text-main">
+            I&apos;m {profileData.name}
+          </span>
+          , a {profileData.title.toLowerCase()} focused on dependable product
+          delivery. {profileData.intro}
         </p>
 
         <div className="flex items-center gap-2 text-sm text-text-soft">

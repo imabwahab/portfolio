@@ -2,16 +2,16 @@ import profile from "../assets/profile_pic3.png";
 
 export const profileData = {
   name: "Abdul Wahab",
-  title: "Full-Stack Web Developer",
+  title: "Full-Stack Engineer",
   location: "Pakistan",
   status: "Available for work",
   kicker: "Available for freelance engagements and full-time opportunities.",
   intro:
-    "I build modern web applications with React, Next.js, Node.js, and NestJS, focusing on clean interfaces, reliable APIs, and practical full-stack delivery.",
+    "I build production web applications with React, Next.js, Node, and TypeScript. My work spans real-time dashboards and payment flows through to secure, multi-tenant backend systems and third-party integrations.",
   roles: [
-    "Production-Ready MERN Applications",
-    "Next.js Frontends and Integrations",
-    "Node.js and NestJS Backend Systems",
+    "Production SaaS and fintech platforms",
+    "React, Next.js, and TypeScript front-ends",
+    "Node, Express, and NestJS backend systems",
   ],
   profileImage: profile,
   availability:
@@ -25,42 +25,43 @@ export const profileData = {
     to: "contact",
   },
   stats: [
-    { value: "3+", label: "Portfolio projects delivered" },
-    { value: "4", label: "Core capability areas" },
-    { value: "MERN", label: "Primary application stack" },
+    { value: "3", label: "Production platforms at Algotix AI" },
+    { value: "5+", label: "Production integrations shipped" },
+    { value: "TypeScript", label: "Primary development stack" },
   ],
   spotlight: [
-    "Responsive frontend delivery",
-    "API integration and backend logic",
-    "Authentication and full-stack workflows",
+    "Real-time, data-driven frontend delivery",
+    "Secure APIs and multi-tenant backend logic",
+    "Payment, telephony, and AI integrations",
   ],
   stacks: [
     "React",
     "Next.js",
+    "TypeScript",
     "Node.js",
     "NestJS",
-    "MongoDB",
     "PostgreSQL",
     "Supabase",
+    "Stripe",
     "Tailwind CSS",
   ],
 };
 
 export const strengths = [
   {
-    title: "Frontend Delivery",
-    text: "Responsive React and Next.js interfaces built with reusable components, clear interaction patterns, and an emphasis on usability.",
+    title: "Frontend Engineering",
+    text: "Responsive React and Next.js interfaces in TypeScript, with reusable component libraries, data visualizations, and real-time UX driven by TanStack Query and Supabase Realtime.",
   },
   {
-    title: "Backend Development",
-    text: "Node.js, Express, and NestJS services for authentication, API design, business logic, and full-stack feature delivery.",
+    title: "Backend & APIs",
+    text: "Node.js, Express, and NestJS services with layered architecture, secure multi-tenant access control, and reliable API and business-logic design.",
   },
   {
-    title: "Database Design",
-    text: "Experience with MongoDB, PostgreSQL, MySQL, and Supabase for schema design, persistence, and application data workflows.",
+    title: "Integrations & Payments",
+    text: "Production integrations across Stripe billing, Twilio telephony, OpenAI analysis, Clerk authentication, and open-banking aggregation.",
   },
   {
-    title: "Deployment Workflow",
-    text: "Git-based collaboration, Docker workflows, and deployment through GitHub, Vercel, and Netlify to support stable releases and fast iteration.",
+    title: "Data & Deployment",
+    text: "PostgreSQL, Supabase, MongoDB, and MySQL data modeling, deployed via Docker and Google Cloud Run / Vercel with Git-based CI/CD.",
   },
 ];
